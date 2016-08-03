@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		699CB94A1D51E3E2001FDB4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 699CB9491D51E3E2001FDB4B /* main.m */; };
+		699CB94D1D51E3E2001FDB4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 699CB94C1D51E3E2001FDB4B /* AppDelegate.m */; };
+		699CB9501D51E3E2001FDB4B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 699CB94F1D51E3E2001FDB4B /* ViewController.m */; };
+		699CB9531D51E3E2001FDB4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 699CB9511D51E3E2001FDB4B /* Main.storyboard */; };
+		699CB9551D51E3E2001FDB4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 699CB9541D51E3E2001FDB4B /* Assets.xcassets */; };
+		699CB9581D51E3E2001FDB4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 699CB9561D51E3E2001FDB4B /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		699CB9451D51E3E2001FDB4B /* EncryptAlbumMeno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EncryptAlbumMeno.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		699CB9491D51E3E2001FDB4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		699CB94B1D51E3E2001FDB4B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		699CB94C1D51E3E2001FDB4B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		699CB94E1D51E3E2001FDB4B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		699CB94F1D51E3E2001FDB4B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		699CB9521D51E3E2001FDB4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		699CB9541D51E3E2001FDB4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		699CB9571D51E3E2001FDB4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		699CB9591D51E3E2001FDB4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		699CB9421D51E3E2001FDB4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		699CB93C1D51E3E2001FDB4B = {
+			isa = PBXGroup;
+			children = (
+				699CB9471D51E3E2001FDB4B /* EncryptAlbumMeno */,
+				699CB9461D51E3E2001FDB4B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		699CB9461D51E3E2001FDB4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				699CB9451D51E3E2001FDB4B /* EncryptAlbumMeno.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		699CB9471D51E3E2001FDB4B /* EncryptAlbumMeno */ = {
+			isa = PBXGroup;
+			children = (
+				699CB94B1D51E3E2001FDB4B /* AppDelegate.h */,
+				699CB94C1D51E3E2001FDB4B /* AppDelegate.m */,
+				699CB94E1D51E3E2001FDB4B /* ViewController.h */,
+				699CB94F1D51E3E2001FDB4B /* ViewController.m */,
+				699CB9511D51E3E2001FDB4B /* Main.storyboard */,
+				699CB9541D51E3E2001FDB4B /* Assets.xcassets */,
+				699CB9561D51E3E2001FDB4B /* LaunchScreen.storyboard */,
+				699CB9591D51E3E2001FDB4B /* Info.plist */,
+				699CB9481D51E3E2001FDB4B /* Supporting Files */,
+			);
+			path = EncryptAlbumMeno;
+			sourceTree = "<group>";
+		};
+		699CB9481D51E3E2001FDB4B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				699CB9491D51E3E2001FDB4B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		699CB9441D51E3E2001FDB4B /* EncryptAlbumMeno */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 699CB95C1D51E3E2001FDB4B /* Build configuration list for PBXNativeTarget "EncryptAlbumMeno" */;
+			buildPhases = (
+				699CB9411D51E3E2001FDB4B /* Sources */,
+				699CB9421D51E3E2001FDB4B /* Frameworks */,
+				699CB9431D51E3E2001FDB4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EncryptAlbumMeno;
+			productName = EncryptAlbumMeno;
+			productReference = 699CB9451D51E3E2001FDB4B /* EncryptAlbumMeno.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		699CB93D1D51E3E2001FDB4B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "王宗成";
+				TargetAttributes = {
+					699CB9441D51E3E2001FDB4B = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 699CB9401D51E3E2001FDB4B /* Build configuration list for PBXProject "EncryptAlbumMeno" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 699CB93C1D51E3E2001FDB4B;
+			productRefGroup = 699CB9461D51E3E2001FDB4B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				699CB9441D51E3E2001FDB4B /* EncryptAlbumMeno */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		699CB9431D51E3E2001FDB4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				699CB9581D51E3E2001FDB4B /* LaunchScreen.storyboard in Resources */,
+				699CB9551D51E3E2001FDB4B /* Assets.xcassets in Resources */,
+				699CB9531D51E3E2001FDB4B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		699CB9411D51E3E2001FDB4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				699CB9501D51E3E2001FDB4B /* ViewController.m in Sources */,
+				699CB94D1D51E3E2001FDB4B /* AppDelegate.m in Sources */,
+				699CB94A1D51E3E2001FDB4B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		699CB9511D51E3E2001FDB4B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				699CB9521D51E3E2001FDB4B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		699CB9561D51E3E2001FDB4B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				699CB9571D51E3E2001FDB4B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		699CB95A1D51E3E2001FDB4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		699CB95B1D51E3E2001FDB4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		699CB95D1D51E3E2001FDB4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EncryptAlbumMeno/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "--------.EncryptAlbumMeno";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		699CB95E1D51E3E2001FDB4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EncryptAlbumMeno/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "--------.EncryptAlbumMeno";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		699CB9401D51E3E2001FDB4B /* Build configuration list for PBXProject "EncryptAlbumMeno" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				699CB95A1D51E3E2001FDB4B /* Debug */,
+				699CB95B1D51E3E2001FDB4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		699CB95C1D51E3E2001FDB4B /* Build configuration list for PBXNativeTarget "EncryptAlbumMeno" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				699CB95D1D51E3E2001FDB4B /* Debug */,
+				699CB95E1D51E3E2001FDB4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 699CB93D1D51E3E2001FDB4B /* Project object */;
+}
