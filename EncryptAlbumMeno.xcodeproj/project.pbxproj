@@ -13,9 +13,11 @@
 		699CB9531D51E3E2001FDB4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 699CB9511D51E3E2001FDB4B /* Main.storyboard */; };
 		699CB9551D51E3E2001FDB4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 699CB9541D51E3E2001FDB4B /* Assets.xcassets */; };
 		699CB9581D51E3E2001FDB4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 699CB9561D51E3E2001FDB4B /* LaunchScreen.storyboard */; };
+		A6042754E9B608F0E09EE658 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F9C6267D963ABCEB7BBCED8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CD6951BC8F088145EF581BB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		699CB9451D51E3E2001FDB4B /* EncryptAlbumMeno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EncryptAlbumMeno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		699CB9491D51E3E2001FDB4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		699CB94B1D51E3E2001FDB4B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		699CB9541D51E3E2001FDB4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		699CB9571D51E3E2001FDB4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		699CB9591D51E3E2001FDB4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F9C6267D963ABCEB7BBCED8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CB7AF2815FA5DFAA867B0D2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6042754E9B608F0E09EE658 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				699CB9471D51E3E2001FDB4B /* EncryptAlbumMeno */,
 				699CB9461D51E3E2001FDB4B /* Products */,
+				85C516202B5D823EC045DFC2 /* Pods */,
+				BB59084F96AABEF1418B2E5E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +86,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		85C516202B5D823EC045DFC2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9CB7AF2815FA5DFAA867B0D2 /* Pods.debug.xcconfig */,
+				0CD6951BC8F088145EF581BB /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BB59084F96AABEF1418B2E5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F9C6267D963ABCEB7BBCED8 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 699CB95C1D51E3E2001FDB4B /* Build configuration list for PBXNativeTarget "EncryptAlbumMeno" */;
 			buildPhases = (
+				46FC6198D83F7C522299B789 /* Check Pods Manifest.lock */,
 				699CB9411D51E3E2001FDB4B /* Sources */,
 				699CB9421D51E3E2001FDB4B /* Frameworks */,
 				699CB9431D51E3E2001FDB4B /* Resources */,
+				EEDF3757BC025C3CF10AAAFE /* Embed Pods Frameworks */,
+				6B46E78E7B4ED74B02E44149 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,6 +170,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		46FC6198D83F7C522299B789 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6B46E78E7B4ED74B02E44149 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEDF3757BC025C3CF10AAAFE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		699CB9411D51E3E2001FDB4B /* Sources */ = {
@@ -261,6 +336,7 @@
 		};
 		699CB95D1D51E3E2001FDB4B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CB7AF2815FA5DFAA867B0D2 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EncryptAlbumMeno/Info.plist;
@@ -272,6 +348,7 @@
 		};
 		699CB95E1D51E3E2001FDB4B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CD6951BC8F088145EF581BB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EncryptAlbumMeno/Info.plist;
@@ -300,6 +377,7 @@
 				699CB95E1D51E3E2001FDB4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
