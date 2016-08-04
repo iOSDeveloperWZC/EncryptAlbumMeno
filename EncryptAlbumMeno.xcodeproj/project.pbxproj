@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		690864CB1D52CD1200328F12 /* XHToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 690864CA1D52CD1200328F12 /* XHToast.m */; };
+		690864D11D52CE4500328F12 /* AlertSettingPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 690864D01D52CE4500328F12 /* AlertSettingPasswordViewController.m */; };
+		690864D41D52F26400328F12 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 690864D31D52F26400328F12 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		699CB94A1D51E3E2001FDB4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 699CB9491D51E3E2001FDB4B /* main.m */; };
 		699CB94D1D51E3E2001FDB4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 699CB94C1D51E3E2001FDB4B /* AppDelegate.m */; };
-		699CB9501D51E3E2001FDB4B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 699CB94F1D51E3E2001FDB4B /* ViewController.m */; };
-		699CB9531D51E3E2001FDB4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 699CB9511D51E3E2001FDB4B /* Main.storyboard */; };
 		699CB9551D51E3E2001FDB4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 699CB9541D51E3E2001FDB4B /* Assets.xcassets */; };
 		699CB9581D51E3E2001FDB4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 699CB9561D51E3E2001FDB4B /* LaunchScreen.storyboard */; };
 		A6042754E9B608F0E09EE658 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F9C6267D963ABCEB7BBCED8 /* libPods.a */; };
@@ -18,16 +19,20 @@
 
 /* Begin PBXFileReference section */
 		0CD6951BC8F088145EF581BB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		690864C91D52CD1200328F12 /* XHToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHToast.h; sourceTree = "<group>"; };
+		690864CA1D52CD1200328F12 /* XHToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHToast.m; sourceTree = "<group>"; };
+		690864CF1D52CE4500328F12 /* AlertSettingPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertSettingPasswordViewController.h; sourceTree = "<group>"; };
+		690864D01D52CE4500328F12 /* AlertSettingPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertSettingPasswordViewController.m; sourceTree = "<group>"; };
+		690864D21D52F26400328F12 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		690864D31D52F26400328F12 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		699CB9451D51E3E2001FDB4B /* EncryptAlbumMeno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EncryptAlbumMeno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		699CB9491D51E3E2001FDB4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		699CB94B1D51E3E2001FDB4B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		699CB94C1D51E3E2001FDB4B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		699CB94E1D51E3E2001FDB4B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		699CB94F1D51E3E2001FDB4B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		699CB9521D51E3E2001FDB4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		699CB9541D51E3E2001FDB4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		699CB9571D51E3E2001FDB4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		699CB9591D51E3E2001FDB4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		699CB95F1D51E7E0001FDB4B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		7F9C6267D963ABCEB7BBCED8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB7AF2815FA5DFAA867B0D2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -44,6 +49,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		690864CC1D52CDB500328F12 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		690864CD1D52CDC100328F12 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		690864CE1D52CDC800328F12 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				690864CF1D52CE4500328F12 /* AlertSettingPasswordViewController.h */,
+				690864D01D52CE4500328F12 /* AlertSettingPasswordViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		699CB93C1D51E3E2001FDB4B = {
 			isa = PBXGroup;
 			children = (
@@ -65,11 +93,16 @@
 		699CB9471D51E3E2001FDB4B /* EncryptAlbumMeno */ = {
 			isa = PBXGroup;
 			children = (
+				690864C91D52CD1200328F12 /* XHToast.h */,
+				690864CA1D52CD1200328F12 /* XHToast.m */,
 				699CB94B1D51E3E2001FDB4B /* AppDelegate.h */,
 				699CB94C1D51E3E2001FDB4B /* AppDelegate.m */,
-				699CB94E1D51E3E2001FDB4B /* ViewController.h */,
-				699CB94F1D51E3E2001FDB4B /* ViewController.m */,
-				699CB9511D51E3E2001FDB4B /* Main.storyboard */,
+				699CB95F1D51E7E0001FDB4B /* PrefixHeader.pch */,
+				690864D21D52F26400328F12 /* KeychainItemWrapper.h */,
+				690864D31D52F26400328F12 /* KeychainItemWrapper.m */,
+				690864CE1D52CDC800328F12 /* Controller */,
+				690864CD1D52CDC100328F12 /* View */,
+				690864CC1D52CDB500328F12 /* Model */,
 				699CB9541D51E3E2001FDB4B /* Assets.xcassets */,
 				699CB9561D51E3E2001FDB4B /* LaunchScreen.storyboard */,
 				699CB9591D51E3E2001FDB4B /* Info.plist */,
@@ -165,7 +198,6 @@
 			files = (
 				699CB9581D51E3E2001FDB4B /* LaunchScreen.storyboard in Resources */,
 				699CB9551D51E3E2001FDB4B /* Assets.xcassets in Resources */,
-				699CB9531D51E3E2001FDB4B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,23 +256,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				699CB9501D51E3E2001FDB4B /* ViewController.m in Sources */,
 				699CB94D1D51E3E2001FDB4B /* AppDelegate.m in Sources */,
 				699CB94A1D51E3E2001FDB4B /* main.m in Sources */,
+				690864CB1D52CD1200328F12 /* XHToast.m in Sources */,
+				690864D41D52F26400328F12 /* KeychainItemWrapper.m in Sources */,
+				690864D11D52CE4500328F12 /* AlertSettingPasswordViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		699CB9511D51E3E2001FDB4B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				699CB9521D51E3E2001FDB4B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		699CB9561D51E3E2001FDB4B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -339,7 +365,10 @@
 			baseConfigurationReference = 9CB7AF2815FA5DFAA867B0D2 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/EncryptAlbumMeno/PrefixHeader.pch";
 				INFOPLIST_FILE = EncryptAlbumMeno/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "--------.EncryptAlbumMeno";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -351,7 +380,10 @@
 			baseConfigurationReference = 0CD6951BC8F088145EF581BB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/EncryptAlbumMeno/PrefixHeader.pch";
 				INFOPLIST_FILE = EncryptAlbumMeno/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "--------.EncryptAlbumMeno";
 				PRODUCT_NAME = "$(TARGET_NAME)";

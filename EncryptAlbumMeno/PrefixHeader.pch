@@ -1,0 +1,37 @@
+//
+//  PrefixHeader.pch
+//  EncryptAlbumMeno
+//
+//  Created by ataw on 16/8/3.
+//  Copyright © 2016年 王宗成. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__)
+#define debugMethod() NSLog(@"%s", __func__)
+#else
+#define NSLog(...)
+#define debugMethod()
+#endif
+
+#define Font(a) [UIFont systemFontOfSize:(a)]
+#define RGB(r,g,b) [UIColor colorWithRed:((CGFloat)r)/255 green:((CGFloat)g)/255 blue:((CGFloat)b)/255 alpha:1]
+#define kUIColorFromRGB(rgbValue) [UIColor \
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+#define MAS_SHORTHAND
+#import "Masonry.h"
+#import "XHToast.h"
+
+
+#define WZCEnterGorground @"EnterGorground"
+#define WZCSecret @"mysecret"
+
+#endif /* PrefixHeader_pch */

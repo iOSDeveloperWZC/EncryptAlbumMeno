@@ -17,6 +17,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor blackColor];
+    AlertSettingPasswordViewController *vc =[[AlertSettingPasswordViewController alloc]init];
+    self.window.rootViewController = vc;
+    
+    [self.window makeKeyAndVisible];
+    [[NSNotificationCenter defaultCenter] postNotificationName:WZCEnterGorground object:nil];
     return YES;
 }
 
@@ -32,6 +39,7 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    [[NSNotificationCenter defaultCenter] postNotificationName:WZCEnterGorground object:nil];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
