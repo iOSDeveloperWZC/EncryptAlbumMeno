@@ -14,6 +14,8 @@
 		699CB94D1D51E3E2001FDB4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 699CB94C1D51E3E2001FDB4B /* AppDelegate.m */; };
 		699CB9551D51E3E2001FDB4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 699CB9541D51E3E2001FDB4B /* Assets.xcassets */; };
 		699CB9581D51E3E2001FDB4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 699CB9561D51E3E2001FDB4B /* LaunchScreen.storyboard */; };
+		69B976781D533C0A0097BA36 /* AlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B976771D533C0A0097BA36 /* AlbumTableViewController.m */; };
+		69B9767B1D533C160097BA36 /* MemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B9767A1D533C160097BA36 /* MemoTableViewController.m */; };
 		A6042754E9B608F0E09EE658 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F9C6267D963ABCEB7BBCED8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,10 @@
 		699CB9571D51E3E2001FDB4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		699CB9591D51E3E2001FDB4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		699CB95F1D51E7E0001FDB4B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		69B976761D533C0A0097BA36 /* AlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumTableViewController.h; sourceTree = "<group>"; };
+		69B976771D533C0A0097BA36 /* AlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumTableViewController.m; sourceTree = "<group>"; };
+		69B976791D533C160097BA36 /* MemoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoTableViewController.h; sourceTree = "<group>"; };
+		69B9767A1D533C160097BA36 /* MemoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoTableViewController.m; sourceTree = "<group>"; };
 		7F9C6267D963ABCEB7BBCED8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB7AF2815FA5DFAA867B0D2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +74,10 @@
 			children = (
 				690864CF1D52CE4500328F12 /* AlertSettingPasswordViewController.h */,
 				690864D01D52CE4500328F12 /* AlertSettingPasswordViewController.m */,
+				69B976761D533C0A0097BA36 /* AlbumTableViewController.h */,
+				69B976771D533C0A0097BA36 /* AlbumTableViewController.m */,
+				69B976791D533C160097BA36 /* MemoTableViewController.h */,
+				69B9767A1D533C160097BA36 /* MemoTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -257,10 +267,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				699CB94D1D51E3E2001FDB4B /* AppDelegate.m in Sources */,
+				69B9767B1D533C160097BA36 /* MemoTableViewController.m in Sources */,
 				699CB94A1D51E3E2001FDB4B /* main.m in Sources */,
 				690864CB1D52CD1200328F12 /* XHToast.m in Sources */,
 				690864D41D52F26400328F12 /* KeychainItemWrapper.m in Sources */,
 				690864D11D52CE4500328F12 /* AlertSettingPasswordViewController.m in Sources */,
+				69B976781D533C0A0097BA36 /* AlbumTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

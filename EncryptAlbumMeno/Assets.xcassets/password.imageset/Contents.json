@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "idiom" : "iphone",
+      "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "idiom" : "iphone",
-      "filename" : "750.jpeg",
+      "idiom" : "universal",
+      "filename" : "密码.png",
       "scale" : "2x"
     },
     {
-      "idiom" : "iphone",
-      "filename" : "Retina5.5.jpeg",
+      "idiom" : "universal",
+      "filename" : "密码-1.png",
       "scale" : "3x"
     }
   ],
