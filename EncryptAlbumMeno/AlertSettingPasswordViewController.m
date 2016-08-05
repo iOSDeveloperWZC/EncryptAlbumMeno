@@ -8,6 +8,7 @@
 #import <Security/Security.h>
 #import "AlertSettingPasswordViewController.h"
 #import "KeychainItemWrapper.h"
+#import "SelectViewController.h"
 @interface AlertSettingPasswordViewController ()<UITextFieldDelegate>
 {
     KeychainItemWrapper *keychainItemWrapper;
@@ -151,46 +152,6 @@
 
     }
     
-//    UILabel *albumLable = [[UILabel alloc]init];
-//    albumLable.textAlignment = NSTextAlignmentCenter;
-//    albumLable.text = @"相册";
-//    albumLable.backgroundColor = [UIColor orangeColor];
-//    albumLable.textColor = [UIColor lightGrayColor];
-//    albumLable.font = Font(20);
-//    albumLable.layer.borderColor = [UIColor whiteColor].CGColor;
-//    albumLable.layer.borderWidth = 1;
-//    albumLable.shadowOffset = CGSizeMake(0, -3);
-//    [selectView addSubview:albumLable];
-//    
-//    
-//    UILabel *menoLable = [[UILabel alloc]init];
-//    menoLable.textAlignment = NSTextAlignmentCenter;
-//    menoLable.text = @"备忘录";
-//    menoLable.font = Font(20);
-//    menoLable.backgroundColor = [UIColor cyanColor];
-//    menoLable.textColor = [UIColor lightGrayColor];
-//    menoLable.layer.borderWidth = 1;
-//    menoLable.layer.borderColor = [UIColor whiteColor].CGColor;
-//    
-//    [selectView addSubview:menoLable];
-    
-    
-    
-//    [albumLable mas_makeConstraints:^(MASConstraintMaker *make) {
-//    
-//        make.bottom.mas_equalTo(selectView.centerY).mas_offset(-20);
-//        make.left.mas_equalTo(20);
-//        make.right.mas_equalTo(-20);
-//        make.height.mas_equalTo(65);
-//    }];
-//    
-//    [menoLable mas_makeConstraints:^(MASConstraintMaker *make) {
-//       
-//        make.top.mas_equalTo(selectView.centerY).mas_offset(20);
-//        make.left.mas_equalTo(albumLable.left);
-//        make.right.mas_equalTo(albumLable.right);
-//        make.height.mas_equalTo(albumLable.height);
-//    }];
 }
 
 -(void)sureBtnAction:(UIButton *)button
@@ -203,17 +164,22 @@
         [keychainItemWrapper setObject:password.text forKey:(id)kSecValueData];
         [userDefualts setBool:YES forKey:@"firstLanuchApp"];
         [XHToast showTopWithText:@"设置成功" topOffset:80 duration:1];
+        SelectViewController *vc = [[SelectViewController alloc]init];
+        [self presentViewController:vc animated:YES completion:nil];
     }
     else
     {
          NSString *secret = [keychainItemWrapper objectForKey:(id)kSecValueData];
         if ([secret isEqualToString:password.text]) {
             
-            [XHToast showTopWithText:@"验证成功" topOffset:80 duration:1];
+            SelectViewController *vc = [[SelectViewController alloc]init];
+            [self presentViewController:vc animated:NO completion:nil];
+
+//            [XHToast showTopWithText:@"验证成功" topOffset:80 duration:1];
         }
         else
         {
-            [XHToast showTopWithText:@"验证失败" topOffset:80 duration:1];
+            [XHToast showCenterWithText:@"密码错误" duration:1.5];
 
         }
     }

@@ -16,6 +16,7 @@
 		699CB9581D51E3E2001FDB4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 699CB9561D51E3E2001FDB4B /* LaunchScreen.storyboard */; };
 		69B976781D533C0A0097BA36 /* AlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B976771D533C0A0097BA36 /* AlbumTableViewController.m */; };
 		69B9767B1D533C160097BA36 /* MemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B9767A1D533C160097BA36 /* MemoTableViewController.m */; };
+		69E576721D541E89001BD13A /* SelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E576711D541E89001BD13A /* SelectViewController.m */; };
 		A6042754E9B608F0E09EE658 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F9C6267D963ABCEB7BBCED8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,8 @@
 		69B976771D533C0A0097BA36 /* AlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumTableViewController.m; sourceTree = "<group>"; };
 		69B976791D533C160097BA36 /* MemoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoTableViewController.h; sourceTree = "<group>"; };
 		69B9767A1D533C160097BA36 /* MemoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoTableViewController.m; sourceTree = "<group>"; };
+		69E576701D541E89001BD13A /* SelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectViewController.h; sourceTree = "<group>"; };
+		69E576711D541E89001BD13A /* SelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectViewController.m; sourceTree = "<group>"; };
 		7F9C6267D963ABCEB7BBCED8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB7AF2815FA5DFAA867B0D2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +77,8 @@
 			children = (
 				690864CF1D52CE4500328F12 /* AlertSettingPasswordViewController.h */,
 				690864D01D52CE4500328F12 /* AlertSettingPasswordViewController.m */,
+				69E576701D541E89001BD13A /* SelectViewController.h */,
+				69E576711D541E89001BD13A /* SelectViewController.m */,
 				69B976761D533C0A0097BA36 /* AlbumTableViewController.h */,
 				69B976771D533C0A0097BA36 /* AlbumTableViewController.m */,
 				69B976791D533C160097BA36 /* MemoTableViewController.h */,
@@ -266,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69E576721D541E89001BD13A /* SelectViewController.m in Sources */,
 				699CB94D1D51E3E2001FDB4B /* AppDelegate.m in Sources */,
 				69B9767B1D533C160097BA36 /* MemoTableViewController.m in Sources */,
 				699CB94A1D51E3E2001FDB4B /* main.m in Sources */,
