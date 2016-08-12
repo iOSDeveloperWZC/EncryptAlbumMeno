@@ -9,6 +9,8 @@
 #import "AlertSettingPasswordViewController.h"
 #import "KeychainItemWrapper.h"
 #import "SelectViewController.h"
+#import "GBCustomCameraController.h"
+#import "GBPhotoController.h"
 @interface AlertSettingPasswordViewController ()<UITextFieldDelegate>
 {
     KeychainItemWrapper *keychainItemWrapper;
@@ -48,6 +50,13 @@
         make.edges.mas_equalTo(self.view);
     }];
     
+    UIButton *cameraBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [cameraBtn setTitle:@"拍照" forState:UIControlStateNormal];
+    [cameraBtn setTitleColor:[UIColor purpleColor] forState:UIControlStateNormal];
+    cameraBtn.layer.cornerRadius = 10;
+    cameraBtn.backgroundColor = [UIColor whiteColor];
+    [cameraBtn addTarget:self action:@selector(cameraBtnAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:cameraBtn];
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setTitle:@"进入相册/备忘录" forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor purpleColor] forState:UIControlStateNormal];
@@ -58,15 +67,25 @@
     
     [btn mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.size.mas_equalTo(CGSizeMake(150, 40));
-        make.centerX.mas_equalTo(self.view.centerX);
+        make.size.mas_equalTo(CGSizeMake(150, 45));
+//        make.centerX.mas_equalTo(self.view.centerX);
+        make.left.mas_equalTo(self.view.centerX).mas_offset(10);
         make.bottom.mas_equalTo(self.view.bottom).mas_offset(-130);
+    }];
+    
+    
+    [cameraBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+       
+        make.size.mas_equalTo(CGSizeMake(150, 45));
+        make.top.mas_equalTo(btn.mas_top);
+        make.right.mas_equalTo(btn.mas_left).mas_offset(-20);
     }];
     
     selectView = [[UIView alloc]init];
     selectView.backgroundColor = RGB(20, 160, 195);
     selectView.hidden = YES;
     [self.view addSubview:selectView];
+    
     
     NSUserDefaults *userDefualts = [NSUserDefaults standardUserDefaults];
     password = [[UITextField alloc]init];
@@ -98,6 +117,30 @@
         make.centerX.mas_equalTo(selectView.centerX);
     }];
     
+    UIImageView *rebackImage = [[UIImageView alloc]init];
+    rebackImage.image = [UIImage imageNamed:@"back_arrow@2x.png"];
+    [selectView addSubview:rebackImage];
+  
+    [rebackImage mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.left.mas_equalTo(10);
+        make.top.mas_equalTo(25);
+    }];
+
+    UIButton *reBackBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [reBackBtn setTitle:@"返回" forState:UIControlStateNormal];
+    reBackBtn.backgroundColor = [UIColor clearColor];
+    [reBackBtn addTarget:self action:@selector(rebackBtnAction:) forControlEvents:UIControlEventTouchUpInside];
+    [reBackBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [selectView addSubview:reBackBtn];
+    
+    [reBackBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        
+        make.centerY.mas_equalTo(rebackImage.centerY);
+        make.left.mas_equalTo(30);
+    }];
+
     [password mas_makeConstraints:^(MASConstraintMaker *make) {
        
 //        make.size.mas_equalTo(CGSizeMake(240, 44));
@@ -152,6 +195,30 @@
 
     }
     
+}
+
+
+-(void)rebackBtnAction:(UIButton *)button
+{
+    [UIView transitionWithView:self.view duration:0.6 options:UIViewAnimationOptionTransitionFlipFromRight animations:^{
+        
+        selectView.hidden = YES;
+        
+    } completion:^(BOOL finished) {
+        
+    }];
+
+}
+
+#pragma mark - 拍照
+-(void)cameraBtnAction:(UIButton *)button
+{
+ 
+    //定义拍照控制器
+    GBCustomCameraController *customCameraVC = [[GBCustomCameraController alloc] init];
+    
+    [self presentViewController:customCameraVC animated:YES completion:nil];
+
 }
 
 -(void)sureBtnAction:(UIButton *)button
@@ -242,36 +309,6 @@
             textField.returnKeyType = UIReturnKeyDone;
         }];
         
-//        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-//            
-////            [self.view endEditing:YES];
-//             UITextField *textFiled = [alertVc.textFields lastObject];
-//            [textFiled resignFirstResponder];
-//
-//            
-//            if ([textFiled.text isEqualToString:secret]) {
-//                
-////                [UIView transitionWithView:self.view duration:0.8 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
-////                    
-////                    selectView.hidden = NO;
-////                    
-////                } completion:^(BOOL finished) {
-////                    
-////                }];
-//                dispatch_async(dispatch_get_main_queue(), ^{
-//                    
-//                    //                });
-//            }
-//            else
-//            {
-//                [XHToast showTopWithText:@"验证失败，稍后再试" topOffset:80 duration:3];
-//            }
-//
-//            [alertVc dismissViewControllerAnimated:YES completion:^{
-//                            }];
-//        }];
-//        
-//        [alertVc addAction:action];
         [self presentViewController:alertVc animated:YES completion:nil];
         
     }

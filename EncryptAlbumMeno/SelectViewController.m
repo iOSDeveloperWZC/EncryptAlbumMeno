@@ -9,15 +9,19 @@
 #import "SelectViewController.h"
 
 @interface SelectViewController ()
-
+{
+    UIWebView *imageWebView;
+}
 @end
 
 @implementation SelectViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self showGifImageWithWebView];
 //     Do any additional setup after loading the view.
-    self.view.backgroundColor = RGB(20, 160, 195) ;
+        self.view.backgroundColor = RGB(20, 160, 195) ;
         UIView *selectView = self.view;
         UILabel *albumLable = [[UILabel alloc]init];
         albumLable.textAlignment = NSTextAlignmentCenter;
@@ -28,6 +32,8 @@
         albumLable.layer.borderColor = [UIColor whiteColor].CGColor;
         albumLable.layer.borderWidth = 1;
         albumLable.shadowOffset = CGSizeMake(0, -3);
+    UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(albumTap)];
+    [albumLable addGestureRecognizer:tap1];
         [selectView addSubview:albumLable];
     
     
@@ -39,7 +45,8 @@
         menoLable.textColor = [UIColor lightGrayColor];
         menoLable.layer.borderWidth = 1;
         menoLable.layer.borderColor = [UIColor whiteColor].CGColor;
-    
+    UITapGestureRecognizer *tap2 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(MenoTap)];
+    [menoLable addGestureRecognizer:tap2];
         [selectView addSubview:menoLable];
     
     
@@ -58,6 +65,40 @@
             make.right.mas_equalTo(albumLable.right);
             make.height.mas_equalTo(albumLable.height);
         }];
+}
+
+-(void)albumTap
+{
+    
+}
+
+-(void)MenoTap
+{
+    
+}
+
+-(void)showGifImageWithWebView{
+    //读取gif图片数据
+    NSData *gifData = [NSData dataWithContentsOfFile: [[NSBundle mainBundle] pathForResource:@"BB" ofType:@"gif"]];
+    //UIWebView生成
+    imageWebView = [[UIWebView alloc] init];
+    imageWebView.backgroundColor = [UIColor clearColor];
+     [imageWebView setOpaque:NO];
+    imageWebView.userInteractionEnabled = NO;
+    //加载gif数据
+    [imageWebView loadData:gifData MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
+    //视图添加此gif控件
+
+    [self.view addSubview:imageWebView];
+
+    [imageWebView mas_makeConstraints:^(MASConstraintMaker *make) {
+       
+        make.top.mas_equalTo(40);;
+        make.centerX.mas_equalTo(self.view.centerX);
+        make.height.mas_equalTo(208);
+        make.width.mas_equalTo(208);
+    }];
+    //用户不可交互
 }
 
 - (void)didReceiveMemoryWarning {
