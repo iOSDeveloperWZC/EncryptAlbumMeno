@@ -7,7 +7,8 @@
 //
 
 #import "SelectViewController.h"
-
+#import "XZPhotoBrowserViewController.h"
+#import "GBCustomCameraController.h"
 @interface SelectViewController ()
 {
     UIWebView *imageWebView;
@@ -32,21 +33,39 @@
         albumLable.layer.borderColor = [UIColor whiteColor].CGColor;
         albumLable.layer.borderWidth = 1;
         albumLable.shadowOffset = CGSizeMake(0, -3);
-    UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(albumTap)];
-    [albumLable addGestureRecognizer:tap1];
+        albumLable.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(albumTap)];
+        [albumLable addGestureRecognizer:tap1];
         [selectView addSubview:albumLable];
+    
+    
+        UILabel *cameraLable = [[UILabel alloc]init];
+        cameraLable.textAlignment = NSTextAlignmentCenter;
+        cameraLable.text = @"相机";
+        cameraLable.backgroundColor = [UIColor orangeColor];
+        cameraLable.textColor = [UIColor lightGrayColor];
+        cameraLable.font = Font(20);
+        cameraLable.layer.borderColor = [UIColor whiteColor].CGColor;
+        cameraLable.layer.borderWidth = 1;
+        cameraLable.shadowOffset = CGSizeMake(0, -3);
+        cameraLable.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap3 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(cameraTap)];
+        [cameraLable addGestureRecognizer:tap3];
+        [selectView addSubview:cameraLable];
+
     
     
         UILabel *menoLable = [[UILabel alloc]init];
         menoLable.textAlignment = NSTextAlignmentCenter;
         menoLable.text = @"备忘录";
+        menoLable.userInteractionEnabled = YES;
         menoLable.font = Font(20);
         menoLable.backgroundColor = [UIColor cyanColor];
         menoLable.textColor = [UIColor lightGrayColor];
         menoLable.layer.borderWidth = 1;
         menoLable.layer.borderColor = [UIColor whiteColor].CGColor;
-    UITapGestureRecognizer *tap2 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(MenoTap)];
-    [menoLable addGestureRecognizer:tap2];
+        UITapGestureRecognizer *tap2 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(MenoTap)];
+        [menoLable addGestureRecognizer:tap2];
         [selectView addSubview:menoLable];
     
     
@@ -58,20 +77,42 @@
             make.height.mas_equalTo(65);
         }];
     
-        [menoLable mas_makeConstraints:^(MASConstraintMaker *make) {
-    
+        [cameraLable mas_makeConstraints:^(MASConstraintMaker *make) {
+           
             make.top.mas_equalTo(selectView.centerY).mas_offset(20);
             make.left.mas_equalTo(albumLable.left);
             make.right.mas_equalTo(albumLable.right);
             make.height.mas_equalTo(albumLable.height);
+
+        }];
+    
+        [menoLable mas_makeConstraints:^(MASConstraintMaker *make) {
+    
+            make.top.mas_equalTo(cameraLable.bottom).mas_offset(40);
+            make.left.mas_equalTo(cameraLable.left);
+            make.right.mas_equalTo(cameraLable.right);
+            make.height.mas_equalTo(cameraLable.height);
         }];
 }
 
+-(void)cameraTap
+{
+    //定义拍照控制器
+    GBCustomCameraController *customCameraVC = [[GBCustomCameraController alloc] init];
+    
+    [self presentViewController:customCameraVC animated:YES completion:nil];
+}
+
+#pragma mark - 选择相册
 -(void)albumTap
 {
     
+    XZPhotoBrowserViewController *vc = [[XZPhotoBrowserViewController alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+    [self presentViewController:nav animated:NO completion:nil];
 }
 
+//备忘录
 -(void)MenoTap
 {
     

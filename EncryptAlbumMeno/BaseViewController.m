@@ -54,14 +54,13 @@
     _navAndStateView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, GBWidth, 64)];
     [self.view addSubview:_navAndStateView];
     _navAndStateView.backgroundColor = RGB(0,134.0,207.0);
-    _navTitleLable = [[UILabel alloc]initWithFrame:CGRectMake(0, 20, GBHeight, 44)];
+    _navTitleLable = [[UILabel alloc]initWithFrame:CGRectMake(0, 20, GBWidth, 44)];
     _navTitleLable.backgroundColor = [UIColor clearColor];
     _navTitleLable.font = [UIFont systemFontOfSize:18];
     _navTitleLable.text = _navTitle;
     _navTitleLable.textColor = [UIColor whiteColor];
     _navTitleLable.textAlignment = NSTextAlignmentCenter;
     [_navAndStateView addSubview:_navTitleLable];
- 
 }
 
 -(void)creatLeftBtn

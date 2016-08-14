@@ -36,11 +36,19 @@
 		692150CF1D5D7D41003728A3 /* icon_返回@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 692150CE1D5D7D41003728A3 /* icon_返回@2x.png */; };
 		692150D31D5D80C7003728A3 /* DataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 692150D21D5D80C7003728A3 /* DataBaseManager.m */; };
 		692150EF1D5D82A8003728A3 /* libsqlcipher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 692150E71D5D825E003728A3 /* libsqlcipher.a */; };
+		694CC9191D5DBC5D009F2D23 /* XZPhotoBrowserFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 694CC9181D5DBC5D009F2D23 /* XZPhotoBrowserFlowLayout.m */; };
+		694CC91C1D5DBC76009F2D23 /* PhotoDetailItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 694CC91B1D5DBC76009F2D23 /* PhotoDetailItem.m */; };
+		694CC9221D5DBC86009F2D23 /* XZPhotoBrowserPopTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 694CC91E1D5DBC86009F2D23 /* XZPhotoBrowserPopTransition.m */; };
+		694CC9231D5DBC86009F2D23 /* XZPhotoBrowserPushTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 694CC9201D5DBC86009F2D23 /* XZPhotoBrowserPushTransition.m */; };
+		694CC9261D5DBD8B009F2D23 /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694CC9251D5DBD8B009F2D23 /* PhotoDetailViewController.m */; };
+		694CC9291D5DBE42009F2D23 /* XZPhotoBrowserItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 694CC9281D5DBE42009F2D23 /* XZPhotoBrowserItem.m */; };
+		694CC92F1D5DC0D2009F2D23 /* XZPhotoBrowserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 694CC92E1D5DC0D2009F2D23 /* XZPhotoBrowserModel.m */; };
+		694CC9321D5DC1CA009F2D23 /* XZPhotoBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694CC9311D5DC1CA009F2D23 /* XZPhotoBrowserViewController.m */; };
+		694CC9421D5DC87A009F2D23 /* PHImageManager+CTAssetsPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694CC9411D5DC87A009F2D23 /* PHImageManager+CTAssetsPickerController.m */; };
 		699CB94A1D51E3E2001FDB4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 699CB9491D51E3E2001FDB4B /* main.m */; };
 		699CB94D1D51E3E2001FDB4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 699CB94C1D51E3E2001FDB4B /* AppDelegate.m */; };
 		699CB9551D51E3E2001FDB4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 699CB9541D51E3E2001FDB4B /* Assets.xcassets */; };
 		699CB9581D51E3E2001FDB4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 699CB9561D51E3E2001FDB4B /* LaunchScreen.storyboard */; };
-		69B976781D533C0A0097BA36 /* AlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B976771D533C0A0097BA36 /* AlbumTableViewController.m */; };
 		69B9767B1D533C160097BA36 /* MemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B9767A1D533C160097BA36 /* MemoTableViewController.m */; };
 		69E576721D541E89001BD13A /* SelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E576711D541E89001BD13A /* SelectViewController.m */; };
 		69E5769C1D54950B001BD13A /* BB.gif in Resources */ = {isa = PBXBuildFile; fileRef = 69E5769B1D54950B001BD13A /* BB.gif */; };
@@ -298,6 +306,24 @@
 		692150D11D5D80C7003728A3 /* DataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataBaseManager.h; path = ../../../../Desktop/EncryptAlbumMeno/EncryptAlbumMeno/DataBaseManager.h; sourceTree = "<group>"; };
 		692150D21D5D80C7003728A3 /* DataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataBaseManager.m; path = ../../../../Desktop/EncryptAlbumMeno/EncryptAlbumMeno/DataBaseManager.m; sourceTree = "<group>"; };
 		692150D51D5D825E003728A3 /* sqlcipher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sqlcipher.xcodeproj; path = sqlcipher/sqlcipher.xcodeproj; sourceTree = "<group>"; };
+		694CC9171D5DBC5D009F2D23 /* XZPhotoBrowserFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZPhotoBrowserFlowLayout.h; sourceTree = "<group>"; };
+		694CC9181D5DBC5D009F2D23 /* XZPhotoBrowserFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZPhotoBrowserFlowLayout.m; sourceTree = "<group>"; };
+		694CC91A1D5DBC76009F2D23 /* PhotoDetailItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailItem.h; sourceTree = "<group>"; };
+		694CC91B1D5DBC76009F2D23 /* PhotoDetailItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailItem.m; sourceTree = "<group>"; };
+		694CC91D1D5DBC86009F2D23 /* XZPhotoBrowserPopTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZPhotoBrowserPopTransition.h; sourceTree = "<group>"; };
+		694CC91E1D5DBC86009F2D23 /* XZPhotoBrowserPopTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZPhotoBrowserPopTransition.m; sourceTree = "<group>"; };
+		694CC91F1D5DBC86009F2D23 /* XZPhotoBrowserPushTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZPhotoBrowserPushTransition.h; sourceTree = "<group>"; };
+		694CC9201D5DBC86009F2D23 /* XZPhotoBrowserPushTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZPhotoBrowserPushTransition.m; sourceTree = "<group>"; };
+		694CC9241D5DBD8B009F2D23 /* PhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailViewController.h; sourceTree = "<group>"; };
+		694CC9251D5DBD8B009F2D23 /* PhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController.m; sourceTree = "<group>"; };
+		694CC9271D5DBE42009F2D23 /* XZPhotoBrowserItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZPhotoBrowserItem.h; sourceTree = "<group>"; };
+		694CC9281D5DBE42009F2D23 /* XZPhotoBrowserItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZPhotoBrowserItem.m; sourceTree = "<group>"; };
+		694CC92D1D5DC0D2009F2D23 /* XZPhotoBrowserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZPhotoBrowserModel.h; sourceTree = "<group>"; };
+		694CC92E1D5DC0D2009F2D23 /* XZPhotoBrowserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZPhotoBrowserModel.m; sourceTree = "<group>"; };
+		694CC9301D5DC1CA009F2D23 /* XZPhotoBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZPhotoBrowserViewController.h; sourceTree = "<group>"; };
+		694CC9311D5DC1CA009F2D23 /* XZPhotoBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZPhotoBrowserViewController.m; sourceTree = "<group>"; };
+		694CC9401D5DC87A009F2D23 /* PHImageManager+CTAssetsPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHImageManager+CTAssetsPickerController.h"; sourceTree = "<group>"; };
+		694CC9411D5DC87A009F2D23 /* PHImageManager+CTAssetsPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHImageManager+CTAssetsPickerController.m"; sourceTree = "<group>"; };
 		699CB9451D51E3E2001FDB4B /* EncryptAlbumMeno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EncryptAlbumMeno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		699CB9491D51E3E2001FDB4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		699CB94B1D51E3E2001FDB4B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -306,8 +332,6 @@
 		699CB9571D51E3E2001FDB4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		699CB9591D51E3E2001FDB4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		699CB95F1D51E7E0001FDB4B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		69B976761D533C0A0097BA36 /* AlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumTableViewController.h; sourceTree = "<group>"; };
-		69B976771D533C0A0097BA36 /* AlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumTableViewController.m; sourceTree = "<group>"; };
 		69B976791D533C160097BA36 /* MemoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoTableViewController.h; sourceTree = "<group>"; };
 		69B9767A1D533C160097BA36 /* MemoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoTableViewController.m; sourceTree = "<group>"; };
 		69E576701D541E89001BD13A /* SelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectViewController.h; sourceTree = "<group>"; };
@@ -653,8 +677,10 @@
 		694CC90D1D5DB54A009F2D23 /* 相册 */ = {
 			isa = PBXGroup;
 			children = (
-				69B976761D533C0A0097BA36 /* AlbumTableViewController.h */,
-				69B976771D533C0A0097BA36 /* AlbumTableViewController.m */,
+				694CC9301D5DC1CA009F2D23 /* XZPhotoBrowserViewController.h */,
+				694CC9311D5DC1CA009F2D23 /* XZPhotoBrowserViewController.m */,
+				694CC9401D5DC87A009F2D23 /* PHImageManager+CTAssetsPickerController.h */,
+				694CC9411D5DC87A009F2D23 /* PHImageManager+CTAssetsPickerController.m */,
 			);
 			name = "相册";
 			sourceTree = "<group>";
@@ -666,6 +692,36 @@
 				69B9767A1D533C160097BA36 /* MemoTableViewController.m */,
 			);
 			name = "备忘录";
+			sourceTree = "<group>";
+		};
+		694CC9101D5DBC32009F2D23 /* 外来物种 */ = {
+			isa = PBXGroup;
+			children = (
+				694CC9241D5DBD8B009F2D23 /* PhotoDetailViewController.h */,
+				694CC9251D5DBD8B009F2D23 /* PhotoDetailViewController.m */,
+				694CC9171D5DBC5D009F2D23 /* XZPhotoBrowserFlowLayout.h */,
+				694CC9181D5DBC5D009F2D23 /* XZPhotoBrowserFlowLayout.m */,
+				694CC91A1D5DBC76009F2D23 /* PhotoDetailItem.h */,
+				694CC91B1D5DBC76009F2D23 /* PhotoDetailItem.m */,
+				694CC9271D5DBE42009F2D23 /* XZPhotoBrowserItem.h */,
+				694CC9281D5DBE42009F2D23 /* XZPhotoBrowserItem.m */,
+				694CC92D1D5DC0D2009F2D23 /* XZPhotoBrowserModel.h */,
+				694CC92E1D5DC0D2009F2D23 /* XZPhotoBrowserModel.m */,
+				694CC9211D5DBC86009F2D23 /* animation */,
+			);
+			name = "外来物种";
+			sourceTree = "<group>";
+		};
+		694CC9211D5DBC86009F2D23 /* animation */ = {
+			isa = PBXGroup;
+			children = (
+				694CC91D1D5DBC86009F2D23 /* XZPhotoBrowserPopTransition.h */,
+				694CC91E1D5DBC86009F2D23 /* XZPhotoBrowserPopTransition.m */,
+				694CC91F1D5DBC86009F2D23 /* XZPhotoBrowserPushTransition.h */,
+				694CC9201D5DBC86009F2D23 /* XZPhotoBrowserPushTransition.m */,
+			);
+			name = animation;
+			path = ../../../Downloads/XZPhotoBrowser/XZPhotoBrowser/Class/animation;
 			sourceTree = "<group>";
 		};
 		699CB93C1D51E3E2001FDB4B = {
@@ -693,6 +749,7 @@
 				699CB94B1D51E3E2001FDB4B /* AppDelegate.h */,
 				699CB94C1D51E3E2001FDB4B /* AppDelegate.m */,
 				699CB95F1D51E7E0001FDB4B /* PrefixHeader.pch */,
+				694CC9101D5DBC32009F2D23 /* 外来物种 */,
 				694CC90A1D5DB4FC009F2D23 /* 提示框  */,
 				694CC9031D5DB4EB009F2D23 /* 图片 */,
 				6916CEC31D5DA460008BB393 /* Model */,
@@ -918,19 +975,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				694CC9321D5DC1CA009F2D23 /* XZPhotoBrowserViewController.m in Sources */,
 				69E576721D541E89001BD13A /* SelectViewController.m in Sources */,
+				694CC9191D5DBC5D009F2D23 /* XZPhotoBrowserFlowLayout.m in Sources */,
 				692150CD1D5D7D19003728A3 /* BaseViewController.m in Sources */,
 				692150A91D5D7530003728A3 /* GBPhotoController.m in Sources */,
 				699CB94D1D51E3E2001FDB4B /* AppDelegate.m in Sources */,
+				694CC9221D5DBC86009F2D23 /* XZPhotoBrowserPopTransition.m in Sources */,
 				692150A81D5D7530003728A3 /* UIButton+GBBlock.m in Sources */,
 				69B9767B1D533C160097BA36 /* MemoTableViewController.m in Sources */,
 				699CB94A1D51E3E2001FDB4B /* main.m in Sources */,
+				694CC91C1D5DBC76009F2D23 /* PhotoDetailItem.m in Sources */,
 				692150D31D5D80C7003728A3 /* DataBaseManager.m in Sources */,
 				690864CB1D52CD1200328F12 /* XHToast.m in Sources */,
+				694CC9231D5DBC86009F2D23 /* XZPhotoBrowserPushTransition.m in Sources */,
 				6916CECC1D5DA471008BB393 /* ImageModel.m in Sources */,
+				694CC9261D5DBD8B009F2D23 /* PhotoDetailViewController.m in Sources */,
+				694CC9421D5DC87A009F2D23 /* PHImageManager+CTAssetsPickerController.m in Sources */,
 				690864D41D52F26400328F12 /* KeychainItemWrapper.m in Sources */,
 				690864D11D52CE4500328F12 /* AlertSettingPasswordViewController.m in Sources */,
-				69B976781D533C0A0097BA36 /* AlbumTableViewController.m in Sources */,
+				694CC92F1D5DC0D2009F2D23 /* XZPhotoBrowserModel.m in Sources */,
+				694CC9291D5DBE42009F2D23 /* XZPhotoBrowserItem.m in Sources */,
 				69214FF51D5D74C1003728A3 /* GBCustomCameraController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

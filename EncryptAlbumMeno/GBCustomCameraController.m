@@ -266,7 +266,7 @@
     [changeCameraBtn setTitle:@"\U0000e63f" forState:UIControlStateNormal];
     [changeCameraBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [changeCameraBtn setTitleColor:GBHeightColor forState:UIControlStateHighlighted];
-    changeCameraBtn.tag = 0;
+    changeCameraBtn.tag = 1;
     WS(weakSelf);
     [changeCameraBtn addActionBlock:^(id sender) {
         UIButton *btn = (UIButton *)sender;
@@ -311,7 +311,7 @@
             model.imageName = [NSString stringWithFormat:@"%@",[NSDate date]];
             model.imageSize = [NSString stringWithFormat:@"%.1fM",size];
             model.imageData = processedJPEG;
-            
+            //
             [DataBaseManager insertValueByBindVar:@[model]];
             //保存到数据库
             btn.enabled = YES;

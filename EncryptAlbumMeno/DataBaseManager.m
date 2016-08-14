@@ -227,11 +227,11 @@ static const char *getPropertyType(objc_property_t property) {
     
     NSMutableArray *modelArr = [NSMutableArray array];
     sqlite3 *sql3 = [self creatAndOpenDataBaseWithName];
-    if (![self creatTableNameWithSqlite3:sql3]) {
-        
-        NSLog(@"创建table失败");
-        return nil;
-    }
+//    if (![self creatTableNameWithSqlite3:sql3]) {
+//        
+//        NSLog(@"创建table失败");
+//        return nil;
+//    }
     NSString *query = [NSString stringWithFormat:@"SELECT * FROM %@",WZCTableName];
     
     sqlite3_stmt *statement;

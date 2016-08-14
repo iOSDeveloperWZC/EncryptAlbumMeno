@@ -1,10 +1,16 @@
 PODS:
+  - CTAssetsPickerController (3.3.1):
+    - PureLayout (~> 3.0.0)
   - Masonry (1.0.1)
+  - PureLayout (3.0.1)
 
 DEPENDENCIES:
+  - CTAssetsPickerController (~> 3.3.0)
   - Masonry
 
 SPEC CHECKSUMS:
+  CTAssetsPickerController: b1d1d50ab87cf6b8b13531de5f4530482e7e53ed
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
 
 COCOAPODS: 0.39.0
