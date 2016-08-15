@@ -35,6 +35,9 @@
 		694AD7261D6166C300BE8424 /* MenoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 694AD7251D6166C300BE8424 /* MenoTableViewCell.m */; };
 		694AD7301D61758900BE8424 /* MenoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 694AD72F1D61758900BE8424 /* MenoModel.m */; };
 		694AD7341D6194C700BE8424 /* MenoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694AD7331D6194C700BE8424 /* MenoViewController.m */; };
+		694AD7401D61C67300BE8424 /* ForgetPassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694AD73D1D61C67300BE8424 /* ForgetPassViewController.m */; };
+		694AD7411D61C67300BE8424 /* PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694AD73F1D61C67300BE8424 /* PasswordViewController.m */; };
+		694AD74C1D61C6E500BE8424 /* ModifyPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694AD74B1D61C6E500BE8424 /* ModifyPasswordViewController.m */; };
 		694CC9191D5DBC5D009F2D23 /* XZPhotoBrowserFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 694CC9181D5DBC5D009F2D23 /* XZPhotoBrowserFlowLayout.m */; };
 		694CC91C1D5DBC76009F2D23 /* PhotoDetailItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 694CC91B1D5DBC76009F2D23 /* PhotoDetailItem.m */; };
 		694CC9221D5DBC86009F2D23 /* XZPhotoBrowserPopTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 694CC91E1D5DBC86009F2D23 /* XZPhotoBrowserPopTransition.m */; };
@@ -310,6 +313,12 @@
 		694AD72F1D61758900BE8424 /* MenoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenoModel.m; sourceTree = "<group>"; };
 		694AD7321D6194C700BE8424 /* MenoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenoViewController.h; sourceTree = "<group>"; };
 		694AD7331D6194C700BE8424 /* MenoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenoViewController.m; sourceTree = "<group>"; };
+		694AD73C1D61C67300BE8424 /* ForgetPassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPassViewController.h; sourceTree = "<group>"; };
+		694AD73D1D61C67300BE8424 /* ForgetPassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPassViewController.m; sourceTree = "<group>"; };
+		694AD73E1D61C67300BE8424 /* PasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordViewController.h; sourceTree = "<group>"; };
+		694AD73F1D61C67300BE8424 /* PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordViewController.m; sourceTree = "<group>"; };
+		694AD74A1D61C6E500BE8424 /* ModifyPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyPasswordViewController.h; sourceTree = "<group>"; };
+		694AD74B1D61C6E500BE8424 /* ModifyPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyPasswordViewController.m; sourceTree = "<group>"; };
 		694CC9171D5DBC5D009F2D23 /* XZPhotoBrowserFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZPhotoBrowserFlowLayout.h; sourceTree = "<group>"; };
 		694CC9181D5DBC5D009F2D23 /* XZPhotoBrowserFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZPhotoBrowserFlowLayout.m; sourceTree = "<group>"; };
 		694CC91A1D5DBC76009F2D23 /* PhotoDetailItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailItem.h; sourceTree = "<group>"; };
@@ -400,6 +409,8 @@
 			children = (
 				692150CB1D5D7D19003728A3 /* BaseViewController.h */,
 				692150CC1D5D7D19003728A3 /* BaseViewController.m */,
+				694AD7491D61C6C200BE8424 /* 修改密码 */,
+				694AD7481D61C67800BE8424 /* 忘记密码 */,
 				694CC90B1D5DB510009F2D23 /* 首页 */,
 				694CC90E1D5DB552009F2D23 /* 备忘录 */,
 				694CC90D1D5DB54A009F2D23 /* 相册 */,
@@ -652,6 +663,26 @@
 				692150E71D5D825E003728A3 /* libsqlcipher.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		694AD7481D61C67800BE8424 /* 忘记密码 */ = {
+			isa = PBXGroup;
+			children = (
+				694AD73C1D61C67300BE8424 /* ForgetPassViewController.h */,
+				694AD73D1D61C67300BE8424 /* ForgetPassViewController.m */,
+				694AD73E1D61C67300BE8424 /* PasswordViewController.h */,
+				694AD73F1D61C67300BE8424 /* PasswordViewController.m */,
+			);
+			name = "忘记密码";
+			sourceTree = "<group>";
+		};
+		694AD7491D61C6C200BE8424 /* 修改密码 */ = {
+			isa = PBXGroup;
+			children = (
+				694AD74A1D61C6E500BE8424 /* ModifyPasswordViewController.h */,
+				694AD74B1D61C6E500BE8424 /* ModifyPasswordViewController.m */,
+			);
+			name = "修改密码";
 			sourceTree = "<group>";
 		};
 		694CC9031D5DB4EB009F2D23 /* 图片 */ = {
@@ -1008,10 +1039,12 @@
 			files = (
 				694CC9321D5DC1CA009F2D23 /* XZPhotoBrowserViewController.m in Sources */,
 				69E576721D541E89001BD13A /* SelectViewController.m in Sources */,
+				694AD7401D61C67300BE8424 /* ForgetPassViewController.m in Sources */,
 				694CC9191D5DBC5D009F2D23 /* XZPhotoBrowserFlowLayout.m in Sources */,
 				692150CD1D5D7D19003728A3 /* BaseViewController.m in Sources */,
 				692150A91D5D7530003728A3 /* GBPhotoController.m in Sources */,
 				694AD7341D6194C700BE8424 /* MenoViewController.m in Sources */,
+				694AD74C1D61C6E500BE8424 /* ModifyPasswordViewController.m in Sources */,
 				699CB94D1D51E3E2001FDB4B /* AppDelegate.m in Sources */,
 				69AA829F1D606E2600029224 /* GBCustomCameraController.m in Sources */,
 				694CC9221D5DBC86009F2D23 /* XZPhotoBrowserPopTransition.m in Sources */,
@@ -1031,6 +1064,7 @@
 				694CC92F1D5DC0D2009F2D23 /* XZPhotoBrowserModel.m in Sources */,
 				694AD7301D61758900BE8424 /* MenoModel.m in Sources */,
 				694CC9291D5DBE42009F2D23 /* XZPhotoBrowserItem.m in Sources */,
+				694AD7411D61C67300BE8424 /* PasswordViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1170,7 +1204,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "--------.EncryptAlbumMeno";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "arm64 armv7s armv7";
+				VALID_ARCHS = "arm64 armv7s";
 			};
 			name = Debug;
 		};
@@ -1214,7 +1248,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "--------.EncryptAlbumMeno";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "arm64 armv7s armv7";
+				VALID_ARCHS = "arm64 armv7s";
 			};
 			name = Release;
 		};

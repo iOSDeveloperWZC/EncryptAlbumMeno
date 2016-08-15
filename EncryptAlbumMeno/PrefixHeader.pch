@@ -32,11 +32,14 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #import "ImageModel.h"
 #import "MenoModel.h"
 #import "DataBaseManager.h"
+#import "BaseViewController.h"
+#import <AVOSCloud/AVOSCloud.h>
+#import "KeychainItemWrapper.h"
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
 #define WZCDBName @"wzcDBName"
 #define WZCTableName @"WZCTableName"
-
 #define WZCMenoTableName @"WZCMenoTableName"
-#import "BaseViewController.h"
 //1.定义比例系数
 #define GBScale [UIScreen mainScreen].bounds.size.width/320
 //3.获得屏幕宽度

@@ -22,7 +22,7 @@
     AlertSettingPasswordViewController *vc =[[AlertSettingPasswordViewController alloc]init];
     self.window.rootViewController = vc;
    
-    
+    [AVOSCloud setApplicationId:@"Xr6SeQmNFdmzR7QIwLGfrQzh-gzGzoHsz" clientKey:@"WvkvK9slG2PzanrBM1zkmmaO"];
     [self.window makeKeyAndVisible];
 //    [[NSNotificationCenter defaultCenter] postNotificationName:WZCEnterGorground object:nil];
     return YES;

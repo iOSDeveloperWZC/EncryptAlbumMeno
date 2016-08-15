@@ -11,6 +11,8 @@
 #import "SelectViewController.h"
 #import "GBCustomCameraController.h"
 #import "GBPhotoController.h"
+#import "ModifyPasswordViewController.h"
+#import "ForgetPassViewController.h"
 @interface AlertSettingPasswordViewController ()<UITextFieldDelegate>
 {
     KeychainItemWrapper *keychainItemWrapper;
@@ -183,6 +185,7 @@
         [forBtn setTitle:@"忘记密码?" forState:UIControlStateNormal];
         forBtn.backgroundColor = [UIColor clearColor];
         [forBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [forBtn addTarget:self action:@selector(forBtnAction) forControlEvents:UIControlEventTouchUpInside];
         [selectView addSubview:forBtn];
         
         [forBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -193,9 +196,40 @@
             make.right.mas_equalTo(sureBtn.right);
         }];
 
+        //修改密码
+        UIButton *modifyBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        
+        [modifyBtn setTitle:@"修改密码" forState:UIControlStateNormal];
+        modifyBtn.backgroundColor = [UIColor clearColor];
+        [modifyBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [selectView addSubview:modifyBtn];
+        [modifyBtn addTarget:self action:@selector(modifyBtnAction) forControlEvents:UIControlEventTouchUpInside];
+        [modifyBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            
+            
+            make.top.mas_equalTo(sureBtn.mas_bottom).mas_offset(10);
+            make.height.mas_equalTo(44);
+            make.left.mas_equalTo(sureBtn.left);
+        }];
+
     }
     
 }
+#pragma mark - 修改密码
+-(void)modifyBtnAction
+{
+    ModifyPasswordViewController *vc = [[ModifyPasswordViewController alloc]init];
+    vc.keychainItemWrapper = keychainItemWrapper;
+    [self presentViewController:vc animated:NO completion:nil];
+}
+#pragma mark - 忘记密码
+-(void)forBtnAction
+{
+    ForgetPassViewController *vc = [[ForgetPassViewController alloc]init];
+    vc.keychainItemWrapper = keychainItemWrapper;
+    [self presentViewController:vc animated:NO completion:nil];
+}
+
 
 
 -(void)rebackBtnAction:(UIButton *)button
@@ -229,8 +263,8 @@
     if (!firstLanuchApp) {
         
         [keychainItemWrapper setObject:password.text forKey:(id)kSecValueData];
-        [userDefualts setBool:YES forKey:@"firstLanuchApp"];
         [XHToast showTopWithText:@"设置成功" topOffset:80 duration:1];
+        [userDefualts setBool:YES forKey:@"firstLanuchApp"];
         SelectViewController *vc = [[SelectViewController alloc]init];
         [self presentViewController:vc animated:YES completion:nil];
     }
@@ -247,7 +281,6 @@
             [XHToast showCenterWithText:@"密码错误" duration:1.5];
         }
     }
-
     
 }
 
