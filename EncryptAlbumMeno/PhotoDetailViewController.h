@@ -18,4 +18,5 @@
 
 @property (nonatomic, strong) UIImageView *tmpImageView;
 
+@property(nonatomic,strong)NSArray *modelArr;
 @end

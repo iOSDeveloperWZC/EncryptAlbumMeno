@@ -50,6 +50,7 @@ static NSString *identifier = @"identifierCell";
 @implementation XZPhotoBrowserViewController
 {
     NSMutableArray *array;
+    NSArray *modelArr;
 }
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -60,6 +61,7 @@ static NSString *identifier = @"identifierCell";
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self reLoadData];
     
     self.hidesBottomBarWhenPushed = YES;
 //    [self.navigationController setToolbarHidden:NO animated:YES];
@@ -186,7 +188,7 @@ static NSString *identifier = @"identifierCell";
 -(void)initData
 {
     
-    NSArray *modelArr = [DataBaseManager queryValueFormTable];
+    modelArr = [DataBaseManager queryValueFormTable];
     
     [self.dataArray addObjectsFromArray:modelArr];
      array = @[].mutableCopy;
@@ -204,7 +206,7 @@ static NSString *identifier = @"identifierCell";
     [self.dataArray removeAllObjects];
     [array removeAllObjects];
     
-    NSArray *modelArr = [DataBaseManager queryValueFormTable];
+    modelArr = [DataBaseManager queryValueFormTable];
     
     [self.dataArray addObjectsFromArray:modelArr];
     array = @[].mutableCopy;
@@ -349,7 +351,7 @@ static NSString *identifier = @"identifierCell";
     PhotoDetailViewController *detail = [[PhotoDetailViewController alloc] init];
     
     detail.dataArray = array;
-    
+    detail.modelArr = modelArr;
     detail.selectIndex = indexPath.row;
 
     [self presentViewController:detail animated:NO completion:nil];

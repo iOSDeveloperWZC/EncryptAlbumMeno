@@ -241,13 +241,10 @@
             
             SelectViewController *vc = [[SelectViewController alloc]init];
             [self presentViewController:vc animated:NO completion:nil];
-
-//            [XHToast showTopWithText:@"验证成功" topOffset:80 duration:1];
         }
         else
         {
             [XHToast showCenterWithText:@"密码错误" duration:1.5];
-
         }
     }
 

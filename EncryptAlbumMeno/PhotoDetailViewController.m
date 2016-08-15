@@ -12,7 +12,7 @@
 #import "XZPhotoBrowserPopTransition.h"
 
 @interface PhotoDetailViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UINavigationControllerDelegate>
-
+@property (nonatomic, strong) NSIndexPath *index;
 @property (nonatomic, strong) UIPercentDrivenInteractiveTransition *percentDrivenTransition;
 
 @end
@@ -23,10 +23,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.navTitle = @"预览";
     [self creatNavAndStateView];
     [self creatLeftBtn];
-    
+    [self creatRight];
     UIScreenEdgePanGestureRecognizer *edgePanGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(edgePanGesture:)];
     edgePanGestureRecognizer.edges = UIRectEdgeRight;
     [self.view addGestureRecognizer:edgePanGestureRecognizer];
@@ -38,6 +37,51 @@
     [self initTmpImageView:self.selectIndex];
 }
 
+-(void)creatRight
+{
+    
+    UIButton *rightButton;
+    rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightButton.frame = CGRectMake(GBWidth - 100, 20 + 7, 100, 30);
+    [rightButton setTitle:@"保存至本地" forState:UIControlStateNormal];
+    rightButton.titleLabel.font = [UIFont systemFontOfSize:14];
+    [rightButton addTarget:self action:@selector(submitAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.navAndStateView addSubview:rightButton];
+    
+    UIButton *centerButton;
+    centerButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [centerButton setTitle:@"删除" forState:UIControlStateNormal];
+    centerButton.titleLabel.font = [UIFont systemFontOfSize:17];
+    [centerButton addTarget:self action:@selector(deletAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.navAndStateView addSubview:centerButton];
+    
+    [centerButton mas_makeConstraints:^(MASConstraintMaker *make) {
+       
+        make.centerX.mas_equalTo(self.navAndStateView.centerX);
+        make.centerY.mas_equalTo(self.navAndStateView.centerY).mas_offset(10);
+    }];
+    
+}
+
+
+-(void)deletAction:(UIButton *)btn
+{
+  
+    if ([DataBaseManager deleteImage:@[_modelArr[self.selectIndex]]]) {
+        
+        [XHToast showCenterWithText:@"删除成功"];
+        [self dismissViewControllerAnimated:NO completion:nil];
+        
+    }
+    else
+    {
+        [XHToast showCenterWithText:@"删除失败"];
+    }
+}
+-(void)submitAction:(UIButton *)button
+{
+    UIImageWriteToSavedPhotosAlbum(self.dataArray[_index.row], self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
+}
 - (void)initTmpImageView:(NSInteger)index
 {
     self.tmpImageView.image = self.dataArray[index];
@@ -115,8 +159,21 @@
 // 设置视图cell
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     PhotoDetailItem *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"identifier" forIndexPath:indexPath];
+    _index = indexPath;
     cell.detailImageView.image = self.dataArray[indexPath.row];
+    
     return cell;
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    if(error != NULL){
+        
+    }else{
+        
+        [XHToast showCenterWithText:@"图片保存到相册"];
+    }
+    
 }
 
 // 设置分区个数

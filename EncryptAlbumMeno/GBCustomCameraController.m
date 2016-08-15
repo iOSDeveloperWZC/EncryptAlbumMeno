@@ -138,7 +138,8 @@
                 [filter removeTarget:cameraView];
                 [filter addTarget:cameraView];
                 //开启滤镜
-                [stillCamera startCameraCapture];            }
+                [stillCamera startCameraCapture];
+            }
                 break;
 
             case 2:
@@ -305,6 +306,8 @@
                 return ;
             }
             
+            UIImageWriteToSavedPhotosAlbum([UIImage imageWithData:processedJPEG], self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
+            
             CGFloat length =[processedJPEG length];
             CGFloat size = length/1024/1024;
             ImageModel *model = [[ImageModel alloc]init];
@@ -372,7 +375,7 @@
     // 2.取的图片
     UIImage *takeImage = info[UIImagePickerControllerOriginalImage];
  
-    
+    UIImageWriteToSavedPhotosAlbum(takeImage, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
     if (self.customCameraBlock) {
         
         self.customCameraBlock(takeImage);
@@ -388,7 +391,7 @@
        
     }else{
   
-        [XHToast showCenterWithText:@"图片保存到相册"];
+//        [XHToast showCenterWithText:@"图片保存到相册"];
     }
     
 }

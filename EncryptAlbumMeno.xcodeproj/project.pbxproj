@@ -11,10 +11,6 @@
 		690864D11D52CE4500328F12 /* AlertSettingPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 690864D01D52CE4500328F12 /* AlertSettingPasswordViewController.m */; };
 		690864D41D52F26400328F12 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 690864D31D52F26400328F12 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6916CECC1D5DA471008BB393 /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6916CECB1D5DA471008BB393 /* ImageModel.m */; };
-		69214FF31D5D74C1003728A3 /* btn_camera_all_click.png in Resources */ = {isa = PBXBuildFile; fileRef = 69214FEE1D5D74C1003728A3 /* btn_camera_all_click.png */; };
-		69214FF41D5D74C1003728A3 /* btn_camera_all.png in Resources */ = {isa = PBXBuildFile; fileRef = 69214FEF1D5D74C1003728A3 /* btn_camera_all.png */; };
-		69214FF51D5D74C1003728A3 /* GBCustomCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69214FF11D5D74C1003728A3 /* GBCustomCameraController.m */; };
-		69214FF61D5D74C1003728A3 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69214FF21D5D74C1003728A3 /* libGPUImage.a */; };
 		692150A81D5D7530003728A3 /* UIButton+GBBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 692150A51D5D7530003728A3 /* UIButton+GBBlock.m */; };
 		692150A91D5D7530003728A3 /* GBPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 692150A71D5D7530003728A3 /* GBPhotoController.m */; };
 		692150AE1D5D7568003728A3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692150AC1D5D7568003728A3 /* AVFoundation.framework */; };
@@ -36,6 +32,9 @@
 		692150CF1D5D7D41003728A3 /* icon_返回@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 692150CE1D5D7D41003728A3 /* icon_返回@2x.png */; };
 		692150D31D5D80C7003728A3 /* DataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 692150D21D5D80C7003728A3 /* DataBaseManager.m */; };
 		692150EF1D5D82A8003728A3 /* libsqlcipher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 692150E71D5D825E003728A3 /* libsqlcipher.a */; };
+		694AD7261D6166C300BE8424 /* MenoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 694AD7251D6166C300BE8424 /* MenoTableViewCell.m */; };
+		694AD7301D61758900BE8424 /* MenoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 694AD72F1D61758900BE8424 /* MenoModel.m */; };
+		694AD7341D6194C700BE8424 /* MenoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694AD7331D6194C700BE8424 /* MenoViewController.m */; };
 		694CC9191D5DBC5D009F2D23 /* XZPhotoBrowserFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 694CC9181D5DBC5D009F2D23 /* XZPhotoBrowserFlowLayout.m */; };
 		694CC91C1D5DBC76009F2D23 /* PhotoDetailItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 694CC91B1D5DBC76009F2D23 /* PhotoDetailItem.m */; };
 		694CC9221D5DBC86009F2D23 /* XZPhotoBrowserPopTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 694CC91E1D5DBC86009F2D23 /* XZPhotoBrowserPopTransition.m */; };
@@ -49,10 +48,14 @@
 		699CB94D1D51E3E2001FDB4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 699CB94C1D51E3E2001FDB4B /* AppDelegate.m */; };
 		699CB9551D51E3E2001FDB4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 699CB9541D51E3E2001FDB4B /* Assets.xcassets */; };
 		699CB9581D51E3E2001FDB4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 699CB9561D51E3E2001FDB4B /* LaunchScreen.storyboard */; };
+		69AA829F1D606E2600029224 /* GBCustomCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AA829E1D606E2600029224 /* GBCustomCameraController.m */; };
 		69B9767B1D533C160097BA36 /* MemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B9767A1D533C160097BA36 /* MemoTableViewController.m */; };
 		69E576721D541E89001BD13A /* SelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E576711D541E89001BD13A /* SelectViewController.m */; };
 		69E5769C1D54950B001BD13A /* BB.gif in Resources */ = {isa = PBXBuildFile; fileRef = 69E5769B1D54950B001BD13A /* BB.gif */; };
 		69EA51AC1D5C7A8400884A3E /* back_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69EA51AB1D5C7A8400884A3E /* back_arrow@2x.png */; };
+		69FCF3E41D606956002BD7E8 /* btn_camera_all_click.png in Resources */ = {isa = PBXBuildFile; fileRef = 69FCF3DF1D606956002BD7E8 /* btn_camera_all_click.png */; };
+		69FCF3E51D606956002BD7E8 /* btn_camera_all.png in Resources */ = {isa = PBXBuildFile; fileRef = 69FCF3E01D606956002BD7E8 /* btn_camera_all.png */; };
+		69FCF3E71D606956002BD7E8 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69FCF3E31D606956002BD7E8 /* libGPUImage.a */; };
 		A6042754E9B608F0E09EE658 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F9C6267D963ABCEB7BBCED8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -104,11 +107,6 @@
 		690864D31D52F26400328F12 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeychainItemWrapper.m; path = ../../../../Desktop/EncryptAlbumMeno/EncryptAlbumMeno/KeychainItemWrapper.m; sourceTree = "<group>"; };
 		6916CECA1D5DA471008BB393 /* ImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageModel.h; sourceTree = "<group>"; };
 		6916CECB1D5DA471008BB393 /* ImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
-		69214FEE1D5D74C1003728A3 /* btn_camera_all_click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_camera_all_click.png; sourceTree = "<group>"; };
-		69214FEF1D5D74C1003728A3 /* btn_camera_all.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_camera_all.png; sourceTree = "<group>"; };
-		69214FF01D5D74C1003728A3 /* GBCustomCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBCustomCameraController.h; sourceTree = "<group>"; };
-		69214FF11D5D74C1003728A3 /* GBCustomCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBCustomCameraController.m; sourceTree = "<group>"; };
-		69214FF21D5D74C1003728A3 /* libGPUImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGPUImage.a; sourceTree = "<group>"; };
 		69214FF71D5D74EA003728A3 /* GLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLProgram.h; sourceTree = "<group>"; };
 		69214FF81D5D74EA003728A3 /* GPUImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImage.h; sourceTree = "<group>"; };
 		69214FF91D5D74EA003728A3 /* GPUImage3x3ConvolutionFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImage3x3ConvolutionFilter.h; sourceTree = "<group>"; };
@@ -306,6 +304,12 @@
 		692150D11D5D80C7003728A3 /* DataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataBaseManager.h; path = ../../../../Desktop/EncryptAlbumMeno/EncryptAlbumMeno/DataBaseManager.h; sourceTree = "<group>"; };
 		692150D21D5D80C7003728A3 /* DataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataBaseManager.m; path = ../../../../Desktop/EncryptAlbumMeno/EncryptAlbumMeno/DataBaseManager.m; sourceTree = "<group>"; };
 		692150D51D5D825E003728A3 /* sqlcipher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sqlcipher.xcodeproj; path = sqlcipher/sqlcipher.xcodeproj; sourceTree = "<group>"; };
+		694AD7241D6166C300BE8424 /* MenoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenoTableViewCell.h; sourceTree = "<group>"; };
+		694AD7251D6166C300BE8424 /* MenoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenoTableViewCell.m; sourceTree = "<group>"; };
+		694AD72E1D61758900BE8424 /* MenoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenoModel.h; sourceTree = "<group>"; };
+		694AD72F1D61758900BE8424 /* MenoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenoModel.m; sourceTree = "<group>"; };
+		694AD7321D6194C700BE8424 /* MenoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenoViewController.h; sourceTree = "<group>"; };
+		694AD7331D6194C700BE8424 /* MenoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenoViewController.m; sourceTree = "<group>"; };
 		694CC9171D5DBC5D009F2D23 /* XZPhotoBrowserFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZPhotoBrowserFlowLayout.h; sourceTree = "<group>"; };
 		694CC9181D5DBC5D009F2D23 /* XZPhotoBrowserFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZPhotoBrowserFlowLayout.m; sourceTree = "<group>"; };
 		694CC91A1D5DBC76009F2D23 /* PhotoDetailItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailItem.h; sourceTree = "<group>"; };
@@ -332,12 +336,25 @@
 		699CB9571D51E3E2001FDB4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		699CB9591D51E3E2001FDB4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		699CB95F1D51E7E0001FDB4B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		69AA829E1D606E2600029224 /* GBCustomCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBCustomCameraController.m; sourceTree = "<group>"; };
+		69AA82A01D606E4F00029224 /* GBCustomCameraController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCustomCameraController.h; sourceTree = "<group>"; };
 		69B976791D533C160097BA36 /* MemoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoTableViewController.h; sourceTree = "<group>"; };
 		69B9767A1D533C160097BA36 /* MemoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoTableViewController.m; sourceTree = "<group>"; };
 		69E576701D541E89001BD13A /* SelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectViewController.h; sourceTree = "<group>"; };
 		69E576711D541E89001BD13A /* SelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectViewController.m; sourceTree = "<group>"; };
 		69E5769B1D54950B001BD13A /* BB.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = BB.gif; sourceTree = "<group>"; };
 		69EA51AB1D5C7A8400884A3E /* back_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_arrow@2x.png"; sourceTree = "<group>"; };
+		69FCF3BB1D6064AC002BD7E8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		69FCF3C31D6064BC002BD7E8 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		69FCF3C51D6064C3002BD7E8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		69FCF3C71D6064DE002BD7E8 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		69FCF3C91D6064E8002BD7E8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		69FCF3CB1D6064F4002BD7E8 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		69FCF3CD1D6064FC002BD7E8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		69FCF3DF1D606956002BD7E8 /* btn_camera_all_click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_camera_all_click.png; sourceTree = "<group>"; };
+		69FCF3E01D606956002BD7E8 /* btn_camera_all.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_camera_all.png; sourceTree = "<group>"; };
+		69FCF3E31D606956002BD7E8 /* libGPUImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGPUImage.a; sourceTree = "<group>"; };
+		69FCF3E81D606B71002BD7E8 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		7F9C6267D963ABCEB7BBCED8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB7AF2815FA5DFAA867B0D2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -356,7 +373,7 @@
 				692150B11D5D759A003728A3 /* UIKit.framework in Frameworks */,
 				692150AE1D5D7568003728A3 /* AVFoundation.framework in Frameworks */,
 				692150AF1D5D7568003728A3 /* Foundation.framework in Frameworks */,
-				69214FF61D5D74C1003728A3 /* libGPUImage.a in Frameworks */,
+				69FCF3E71D606956002BD7E8 /* libGPUImage.a in Frameworks */,
 				A6042754E9B608F0E09EE658 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,11 +425,11 @@
 				692150A51D5D7530003728A3 /* UIButton+GBBlock.m */,
 				692150A61D5D7530003728A3 /* GBPhotoController.h */,
 				692150A71D5D7530003728A3 /* GBPhotoController.m */,
-				69214FEE1D5D74C1003728A3 /* btn_camera_all_click.png */,
-				69214FEF1D5D74C1003728A3 /* btn_camera_all.png */,
-				69214FF01D5D74C1003728A3 /* GBCustomCameraController.h */,
-				69214FF11D5D74C1003728A3 /* GBCustomCameraController.m */,
-				69214FF21D5D74C1003728A3 /* libGPUImage.a */,
+				69FCF3DF1D606956002BD7E8 /* btn_camera_all_click.png */,
+				69FCF3E01D606956002BD7E8 /* btn_camera_all.png */,
+				69AA82A01D606E4F00029224 /* GBCustomCameraController.h */,
+				69AA829E1D606E2600029224 /* GBCustomCameraController.m */,
+				69FCF3E31D606956002BD7E8 /* libGPUImage.a */,
 				692150A31D5D74EA003728A3 /* include */,
 			);
 			name = "相机拍照";
@@ -690,6 +707,12 @@
 			children = (
 				69B976791D533C160097BA36 /* MemoTableViewController.h */,
 				69B9767A1D533C160097BA36 /* MemoTableViewController.m */,
+				694AD7321D6194C700BE8424 /* MenoViewController.h */,
+				694AD7331D6194C700BE8424 /* MenoViewController.m */,
+				694AD7241D6166C300BE8424 /* MenoTableViewCell.h */,
+				694AD7251D6166C300BE8424 /* MenoTableViewCell.m */,
+				694AD72E1D61758900BE8424 /* MenoModel.h */,
+				694AD72F1D61758900BE8424 /* MenoModel.m */,
 			);
 			name = "备忘录";
 			sourceTree = "<group>";
@@ -786,6 +809,14 @@
 		BB59084F96AABEF1418B2E5E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				69FCF3E81D606B71002BD7E8 /* Photos.framework */,
+				69FCF3CD1D6064FC002BD7E8 /* libz.tbd */,
+				69FCF3CB1D6064F4002BD7E8 /* libstdc++.6.tbd */,
+				69FCF3C91D6064E8002BD7E8 /* CoreTelephony.framework */,
+				69FCF3C71D6064DE002BD7E8 /* libsqlite3.0.tbd */,
+				69FCF3C51D6064C3002BD7E8 /* SystemConfiguration.framework */,
+				69FCF3C31D6064BC002BD7E8 /* libiconv.tbd */,
+				69FCF3BB1D6064AC002BD7E8 /* Security.framework */,
 				692150BA1D5D75E2003728A3 /* OpenGLES.framework */,
 				692150B41D5D75D8003728A3 /* CoreMedia.framework */,
 				692150B51D5D75D8003728A3 /* CoreVideo.framework */,
@@ -906,14 +937,14 @@
 				69E5769C1D54950B001BD13A /* BB.gif in Resources */,
 				692150C51D5D780C003728A3 /* demo.html in Resources */,
 				699CB9581D51E3E2001FDB4B /* LaunchScreen.storyboard in Resources */,
+				69FCF3E51D606956002BD7E8 /* btn_camera_all.png in Resources */,
 				692150CA1D5D780C003728A3 /* iconfont.woff in Resources */,
-				69214FF31D5D74C1003728A3 /* btn_camera_all_click.png in Resources */,
 				692150CF1D5D7D41003728A3 /* icon_返回@2x.png in Resources */,
-				69214FF41D5D74C1003728A3 /* btn_camera_all.png in Resources */,
 				692150C81D5D780C003728A3 /* iconfont.svg in Resources */,
 				692150C61D5D780C003728A3 /* iconfont.css in Resources */,
 				692150C71D5D780C003728A3 /* iconfont.eot in Resources */,
 				692150C91D5D780C003728A3 /* iconfont.ttf in Resources */,
+				69FCF3E41D606956002BD7E8 /* btn_camera_all_click.png in Resources */,
 				69EA51AC1D5C7A8400884A3E /* back_arrow@2x.png in Resources */,
 				692150C41D5D780C003728A3 /* demo.css in Resources */,
 				699CB9551D51E3E2001FDB4B /* Assets.xcassets in Resources */,
@@ -980,13 +1011,16 @@
 				694CC9191D5DBC5D009F2D23 /* XZPhotoBrowserFlowLayout.m in Sources */,
 				692150CD1D5D7D19003728A3 /* BaseViewController.m in Sources */,
 				692150A91D5D7530003728A3 /* GBPhotoController.m in Sources */,
+				694AD7341D6194C700BE8424 /* MenoViewController.m in Sources */,
 				699CB94D1D51E3E2001FDB4B /* AppDelegate.m in Sources */,
+				69AA829F1D606E2600029224 /* GBCustomCameraController.m in Sources */,
 				694CC9221D5DBC86009F2D23 /* XZPhotoBrowserPopTransition.m in Sources */,
 				692150A81D5D7530003728A3 /* UIButton+GBBlock.m in Sources */,
 				69B9767B1D533C160097BA36 /* MemoTableViewController.m in Sources */,
 				699CB94A1D51E3E2001FDB4B /* main.m in Sources */,
 				694CC91C1D5DBC76009F2D23 /* PhotoDetailItem.m in Sources */,
 				692150D31D5D80C7003728A3 /* DataBaseManager.m in Sources */,
+				694AD7261D6166C300BE8424 /* MenoTableViewCell.m in Sources */,
 				690864CB1D52CD1200328F12 /* XHToast.m in Sources */,
 				694CC9231D5DBC86009F2D23 /* XZPhotoBrowserPushTransition.m in Sources */,
 				6916CECC1D5DA471008BB393 /* ImageModel.m in Sources */,
@@ -995,8 +1029,8 @@
 				690864D41D52F26400328F12 /* KeychainItemWrapper.m in Sources */,
 				690864D11D52CE4500328F12 /* AlertSettingPasswordViewController.m in Sources */,
 				694CC92F1D5DC0D2009F2D23 /* XZPhotoBrowserModel.m in Sources */,
+				694AD7301D61758900BE8424 /* MenoModel.m in Sources */,
 				694CC9291D5DBE42009F2D23 /* XZPhotoBrowserItem.m in Sources */,
-				69214FF51D5D74C1003728A3 /* GBCustomCameraController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1102,6 +1136,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/EncryptAlbumMeno/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1135,6 +1170,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "--------.EncryptAlbumMeno";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7s armv7";
 			};
 			name = Debug;
 		};
@@ -1144,6 +1180,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/EncryptAlbumMeno/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1177,6 +1214,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "--------.EncryptAlbumMeno";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7s armv7";
 			};
 			name = Release;
 		};

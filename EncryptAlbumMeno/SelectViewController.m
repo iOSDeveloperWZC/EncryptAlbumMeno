@@ -9,6 +9,7 @@
 #import "SelectViewController.h"
 #import "XZPhotoBrowserViewController.h"
 #import "GBCustomCameraController.h"
+#import "MemoTableViewController.h"
 @interface SelectViewController ()
 {
     UIWebView *imageWebView;
@@ -22,17 +23,21 @@
     
     [self showGifImageWithWebView];
 //     Do any additional setup after loading the view.
-        self.view.backgroundColor = RGB(20, 160, 195) ;
+//        self.view.backgroundColor = RGB(20, 160, 195) ;
+    self.view.backgroundColor = [UIColor whiteColor];
         UIView *selectView = self.view;
         UILabel *albumLable = [[UILabel alloc]init];
+        albumLable.layer.cornerRadius = 10;
+        albumLable.clipsToBounds = YES;
+        albumLable.layer.borderColor = [UIColor purpleColor].CGColor;
+        albumLable.layer.borderWidth = 1;
+    
         albumLable.textAlignment = NSTextAlignmentCenter;
         albumLable.text = @"相册";
-        albumLable.backgroundColor = [UIColor orangeColor];
-        albumLable.textColor = [UIColor lightGrayColor];
+        albumLable.backgroundColor = [UIColor whiteColor];
+        albumLable.textColor = [UIColor grayColor];
         albumLable.font = Font(20);
-        albumLable.layer.borderColor = [UIColor whiteColor].CGColor;
-        albumLable.layer.borderWidth = 1;
-        albumLable.shadowOffset = CGSizeMake(0, -3);
+        albumLable.shadowOffset = CGSizeMake(0, -10);
         albumLable.userInteractionEnabled = YES;
         UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(albumTap)];
         [albumLable addGestureRecognizer:tap1];
@@ -42,11 +47,13 @@
         UILabel *cameraLable = [[UILabel alloc]init];
         cameraLable.textAlignment = NSTextAlignmentCenter;
         cameraLable.text = @"相机";
-        cameraLable.backgroundColor = [UIColor orangeColor];
-        cameraLable.textColor = [UIColor lightGrayColor];
+        cameraLable.backgroundColor = [UIColor whiteColor];
+        cameraLable.textColor = [UIColor grayColor];
         cameraLable.font = Font(20);
-        cameraLable.layer.borderColor = [UIColor whiteColor].CGColor;
+        cameraLable.layer.cornerRadius = 10;
+        cameraLable.layer.borderColor = [UIColor purpleColor].CGColor;
         cameraLable.layer.borderWidth = 1;
+        cameraLable.clipsToBounds = YES;
         cameraLable.shadowOffset = CGSizeMake(0, -3);
         cameraLable.userInteractionEnabled = YES;
         UITapGestureRecognizer *tap3 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(cameraTap)];
@@ -60,10 +67,11 @@
         menoLable.text = @"备忘录";
         menoLable.userInteractionEnabled = YES;
         menoLable.font = Font(20);
-        menoLable.backgroundColor = [UIColor cyanColor];
-        menoLable.textColor = [UIColor lightGrayColor];
+        menoLable.backgroundColor = [UIColor whiteColor];
+        menoLable.textColor = [UIColor grayColor];
+        menoLable.layer.cornerRadius = 10;
         menoLable.layer.borderWidth = 1;
-        menoLable.layer.borderColor = [UIColor whiteColor].CGColor;
+        menoLable.layer.borderColor = [UIColor purpleColor].CGColor;
         UITapGestureRecognizer *tap2 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(MenoTap)];
         [menoLable addGestureRecognizer:tap2];
         [selectView addSubview:menoLable];
@@ -115,7 +123,8 @@
 //备忘录
 -(void)MenoTap
 {
-    
+    MemoTableViewController *vc = [[MemoTableViewController alloc]init];
+    [self presentViewController:vc animated:NO completion:nil];
 }
 
 -(void)showGifImageWithWebView{

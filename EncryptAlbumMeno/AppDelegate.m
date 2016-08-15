@@ -21,6 +21,7 @@
     self.window.backgroundColor = [UIColor blackColor];
     AlertSettingPasswordViewController *vc =[[AlertSettingPasswordViewController alloc]init];
     self.window.rootViewController = vc;
+   
     
     [self.window makeKeyAndVisible];
 //    [[NSNotificationCenter defaultCenter] postNotificationName:WZCEnterGorground object:nil];

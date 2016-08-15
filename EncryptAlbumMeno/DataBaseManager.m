@@ -221,6 +221,81 @@ static const char *getPropertyType(objc_property_t property) {
     return YES;
 }
 
+
++(BOOL)creatMenoTableNameWithSqlite3:(sqlite3 *)sql3
+{
+    
+    if (sql3 == nil) {
+        
+        return NO;
+    }
+    
+    NSString *sqlSentence = [NSString stringWithFormat:@"create table if not exists %@(title text,time text,content text)",WZCMenoTableName];
+    
+    char *error = NULL;
+    
+    int Result;
+    Result = sqlite3_exec(sql3,[sqlSentence UTF8String],NULL,NULL,&error);
+    
+    if (Result != SQLITE_OK) {
+        
+        NSLog(@"错误码%d 创建失败",Result);
+        sqlite3_close(sql3);
+        return NO;
+    }
+    else
+    {
+        NSLog(@"创建成功");
+    }
+    //    sqlite3_close(sql3);
+    
+    return YES;
+}
+
+#pragma mark - 查询
++(NSArray *)queryValueFormMenoTable
+{
+    
+    NSMutableArray *modelArr = [NSMutableArray array];
+    sqlite3 *sql3 = [self creatAndOpenDataBaseWithName];
+  
+    NSString *query = [NSString stringWithFormat:@"SELECT * FROM %@",WZCMenoTableName];
+    
+    sqlite3_stmt *statement;
+    int result = sqlite3_prepare_v2(sql3 ,[query UTF8String],-1,&statement,nil);
+    //语句准备好了
+    if (result == SQLITE_OK) {
+        
+        //开始遍历行(执行select语句)
+        while (sqlite3_step(statement) == SQLITE_ROW) {
+            
+            char *charValue =(char *)sqlite3_column_text(statement,0);
+            NSString *title = [NSString stringWithUTF8String:charValue];
+            
+            char *charValue1 =(char *)sqlite3_column_text(statement,1);
+            NSString *time = [NSString stringWithUTF8String:charValue1];
+            
+            char *charValue3 =(char *)sqlite3_column_text(statement, 2);
+            NSString *content = [NSString stringWithUTF8String:charValue3];
+            
+            MenoModel *model = [[MenoModel alloc]init];
+            model.title = title;
+            model.time = time;
+            model.content = content;
+            [modelArr addObject:model];
+        }
+        //结束语句
+        sqlite3_finalize(statement);
+        
+    }
+    
+    //关闭数据库
+    sqlite3_close(sql3);
+    return modelArr;
+}
+
+
+
 #pragma mark - 查询
 +(NSArray *)queryValueFormTable
 {
@@ -312,7 +387,48 @@ static const char *getPropertyType(objc_property_t property) {
 
 }
 
-#pragma mark - 删
+
++(void)insertMenoValueByBindVar:(NSArray *)arr
+{
+    sqlite3 *sql3 = [self creatAndOpenDataBaseWithName];
+    if (![self creatMenoTableNameWithSqlite3:sql3]) {
+        
+        NSLog(@"创建table失败");
+        return;
+    }
+    
+    NSString *query = [NSString stringWithFormat:@"insert into %@(title,time,content) values(?,?,?)",WZCMenoTableName];
+    
+    sqlite3_stmt *statement;
+    int result = sqlite3_prepare_v2(sql3 ,[query UTF8String],-1,&statement,nil);
+    //语句准备好了
+    if (result == SQLITE_OK) {
+        
+        //绑定方法参数 sqlite3_stmt 表示sqlite3_prepare_v2中的那个 第二个表示对应问号，第三个都是表示问号对应的值，第四个表示第三个参数的长度，文本数据类型传－1 代表整个字符串，其他类型的需要指定所传数据长度，
+        //开始遍历行(执行select语句)
+        //1表示第一个问号 依次类推
+        for (MenoModel *model in arr) {
+            
+            sqlite3_bind_text(statement,1,[model.title UTF8String],-1,NULL);
+            sqlite3_bind_text(statement,2,[model.time UTF8String],-1,NULL);
+            sqlite3_bind_text(statement,3, [model.content UTF8String], -1,NULL);
+            if (sqlite3_step(statement) == SQLITE_DONE) {
+                
+                NSLog(@"插入完成");
+                
+                [XHToast showCenterWithText:@"保存成功" duration:1.5];
+            }
+        }
+        
+    };
+    
+    //结束语句
+    sqlite3_finalize(statement);
+    sqlite3_close(sql3);
+    
+}
+
+#pragma mark - 删 根据id查询 需要转化为C语言类型字符串
 +(BOOL)deleteImage:(NSArray *)arr
 {
     sqlite3 *sql3 = [self creatAndOpenDataBaseWithName];
@@ -324,7 +440,7 @@ static const char *getPropertyType(objc_property_t property) {
     for (ImageModel *model in arr) {
         
         
-        NSString *sqlSentence = [NSString stringWithFormat:@"DELETE FROM %@ WHERE ImageName=%@;",WZCTableName,model.imageName];
+        NSString *sqlSentence = [NSString stringWithFormat:@"DELETE FROM %@ WHERE ImageName='%@'",WZCTableName,model.imageName];
         
         char *error = NULL;
         
@@ -344,7 +460,71 @@ static const char *getPropertyType(objc_property_t property) {
             return YES;
         }
     }
-    return YES;
+    return NO;
 }
 
++(BOOL)deleteMeno:(MenoModel *)model
+{
+    sqlite3 *sql3 = [self creatAndOpenDataBaseWithName];
+    if (![self creatTableNameWithSqlite3:sql3]) {
+        
+        NSLog(@"创建table失败");
+        return NO;
+    }
+
+        NSString *sqlSentence = [NSString stringWithFormat:@"DELETE FROM %@ WHERE time='%@'",WZCMenoTableName,model.time];
+        
+        char *error = NULL;
+        
+        int Result;
+        Result = sqlite3_exec(sql3,[sqlSentence UTF8String],NULL,NULL,&error);
+        
+        if (Result != SQLITE_OK) {
+            
+            NSLog(@"错误码%d 删除失败",Result);
+            sqlite3_close(sql3);
+            return NO;
+        }
+        else
+        {
+            NSLog(@"删除成功");
+            sqlite3_close(sql3);
+            return YES;
+        }
+
+    return NO;
+}
+
++(BOOL)updataMenoAccordingTime:(NSString *)time modifyContent:(NSString *)content andTitle:(NSString *)title
+{
+    sqlite3 *sql3 = [self creatAndOpenDataBaseWithName];
+    if (![self creatTableNameWithSqlite3:sql3]) {
+        
+        NSLog(@"创建table失败");
+        return NO;
+    }
+    //UPDATE familymember set Family_ID=32767 WHERE ID=179;
+    NSString *sqlSentence = [NSString stringWithFormat:@"UPDATE %@ set content = '%@',title = '%@' WHERE time='%@'",WZCMenoTableName,content,title,time];
+    
+    char *error = NULL;
+    
+    int Result;
+    Result = sqlite3_exec(sql3,[sqlSentence UTF8String],NULL,NULL,&error);
+    
+    if (Result != SQLITE_OK) {
+        
+        NSLog(@"错误码%d 更新失败",Result);
+        sqlite3_close(sql3);
+        return NO;
+    }
+    else
+    {
+        NSLog(@"更新成功");
+        sqlite3_close(sql3);
+        return YES;
+    }
+    
+    return NO;
+
+}
 @end
