@@ -43,7 +43,6 @@
         [albumLable addGestureRecognizer:tap1];
         [selectView addSubview:albumLable];
     
-    
         UILabel *cameraLable = [[UILabel alloc]init];
         cameraLable.textAlignment = NSTextAlignmentCenter;
         cameraLable.text = @"相机";

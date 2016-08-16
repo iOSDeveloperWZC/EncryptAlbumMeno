@@ -43,48 +43,75 @@
 {
    
     UIImageView *bgImageView = [[UIImageView alloc]init];
+ 
+//    bgImageView.image = [UIImageEffects imageByApplyingExtraLightEffectToImage:[UIImage imageNamed:@"Image"]];
+//    bgImageView.image = [UIImageEffects imageByApplyingLightEffectToImage:[UIImage imageNamed:@"Image"]];
+//    bgImageView.image = [UIImageEffects imageByApplyingDarkEffectToImage:[UIImage imageNamed:@"Image"]];
+//    bgImageView.image = [UIImageEffects imageByApplyingTintEffectWithColor:[UIColor colorWithWhite:0.9 alpha:01] toImage:[UIImage imageNamed:@"Image"]];
+
     bgImageView.image = [UIImage imageNamed:@"Image"];
     bgImageView.userInteractionEnabled = YES;
     [self.view addSubview:bgImageView];
     
     [bgImageView mas_makeConstraints:^(MASConstraintMaker *make) {
        
-        make.edges.mas_equalTo(self.view);
+        make.top.mas_equalTo(64);
+        make.centerX.mas_equalTo(self.view.centerX);
+    }];
+    
+    UILabel *logoLable = [[UILabel alloc]init];
+    logoLable.text = @"杭州之行网络科技";
+    logoLable.font = [UIFont systemFontOfSize:20];
+    [self.view addSubview:logoLable];
+    [logoLable mas_makeConstraints:^(MASConstraintMaker *make) {
+       
+        make.top.mas_equalTo(bgImageView.mas_bottom).with.mas_offset(15);
+        make.centerX.mas_equalTo(self.view.centerX);
+
     }];
     
     UIButton *cameraBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [cameraBtn setTitle:@"拍照" forState:UIControlStateNormal];
     [cameraBtn setTitleColor:[UIColor purpleColor] forState:UIControlStateNormal];
     cameraBtn.layer.cornerRadius = 10;
+    cameraBtn.layer.borderColor = [UIColor purpleColor].CGColor;
+    cameraBtn.layer.borderWidth = 1;
     cameraBtn.backgroundColor = [UIColor whiteColor];
     [cameraBtn addTarget:self action:@selector(cameraBtnAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:cameraBtn];
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setTitle:@"进入相册/备忘录" forState:UIControlStateNormal];
+    
     [btn setTitleColor:[UIColor purpleColor] forState:UIControlStateNormal];
     btn.layer.cornerRadius = 10;
+    btn.layer.borderColor = [UIColor purpleColor].CGColor;
+    btn.layer.borderWidth = 1;
     btn.backgroundColor = [UIColor whiteColor];
     [btn addTarget:self action:@selector(btnAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
+
+    [cameraBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+       
+        make.left.mas_equalTo(20);
+        make.right.mas_equalTo(-20);
+        make.height.mas_equalTo(50);
+        make.top.mas_equalTo(logoLable.bottom).mas_offset(70);
+    }];
     
     [btn mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.size.mas_equalTo(CGSizeMake(150, 45));
-//        make.centerX.mas_equalTo(self.view.centerX);
-        make.left.mas_equalTo(self.view.centerX).mas_offset(10);
-        make.bottom.mas_equalTo(self.view.bottom).mas_offset(-130);
+        make.left.mas_equalTo(cameraBtn.left);
+        make.right.mas_equalTo(cameraBtn.right);
+        make.height.mas_equalTo(cameraBtn.height);
+        make.top.mas_equalTo(cameraBtn.bottom).mas_offset(40);
     }];
     
     
-    [cameraBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-       
-        make.size.mas_equalTo(CGSizeMake(150, 45));
-        make.top.mas_equalTo(btn.mas_top);
-        make.right.mas_equalTo(btn.mas_left).mas_offset(-20);
-    }];
-    
+    //反面
     selectView = [[UIView alloc]init];
-    selectView.backgroundColor = RGB(20, 160, 195);
+//    selectView.backgroundColor = RGB(20, 160, 195);
+    selectView.backgroundColor = [UIColor whiteColor];
+    
     selectView.hidden = YES;
     [self.view addSubview:selectView];
     
@@ -110,12 +137,12 @@
     
     
     UIImageView *logoIamge = [[UIImageView alloc]init];
-    logoIamge.image = [UIImage imageNamed:@"log"];
+    logoIamge.image = [UIImage imageNamed:@"Image"];
     [selectView addSubview:logoIamge];
     
     [logoIamge mas_makeConstraints:^(MASConstraintMaker *make) {
        
-        make.top.mas_equalTo(selectView.top).mas_offset(40);
+        make.top.mas_equalTo(selectView.top).mas_offset(64);
         make.centerX.mas_equalTo(selectView.centerX);
     }];
     
@@ -133,15 +160,27 @@
     [reBackBtn setTitle:@"返回" forState:UIControlStateNormal];
     reBackBtn.backgroundColor = [UIColor clearColor];
     [reBackBtn addTarget:self action:@selector(rebackBtnAction:) forControlEvents:UIControlEventTouchUpInside];
-    [reBackBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [reBackBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [selectView addSubview:reBackBtn];
     
     [reBackBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         
         
         make.centerY.mas_equalTo(rebackImage.centerY);
-        make.left.mas_equalTo(30);
+        make.left.mas_equalTo(15);
     }];
+    
+    UILabel *logo1Lable = [[UILabel alloc]init];
+    logo1Lable.text = @"杭州之行网络科技";
+    logo1Lable.font = [UIFont systemFontOfSize:20];
+    [self.view addSubview:logo1Lable];
+    [logo1Lable mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.top.mas_equalTo(logoIamge.mas_bottom).with.mas_offset(15);
+        make.centerX.mas_equalTo(self.view.centerX);
+        
+    }];
+
 
     [password mas_makeConstraints:^(MASConstraintMaker *make) {
        
@@ -151,7 +190,7 @@
         make.height.mas_equalTo(50);
 //        make.centerX.mas_equalTo(selectView.centerX);
 //        make.bottom.mas_equalTo(selectView.centerY).mas_offset(-60);
-        make.top.mas_equalTo(logoIamge.bottom).mas_offset(60);
+        make.top.mas_equalTo(logo1Lable.bottom).mas_offset(70);
     }];
     
     [selectView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -161,10 +200,10 @@
     
     UIButton *sureBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [sureBtn setTitle:@"确定" forState:UIControlStateNormal];
-    sureBtn.backgroundColor = [UIColor orangeColor];
     sureBtn.layer.cornerRadius = 10;
-    sureBtn.layer.borderColor = [UIColor whiteColor].CGColor;
+    sureBtn.layer.borderColor = [UIColor purpleColor].CGColor;
     sureBtn.layer.borderWidth = 1;
+    [sureBtn setTitleColor:[UIColor purpleColor] forState:UIControlStateNormal];
     [sureBtn addTarget:self action:@selector(sureBtnAction:) forControlEvents:UIControlEventTouchUpInside];
     [selectView addSubview:sureBtn];
     
@@ -184,7 +223,7 @@
         UIButton *forBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [forBtn setTitle:@"忘记密码?" forState:UIControlStateNormal];
         forBtn.backgroundColor = [UIColor clearColor];
-        [forBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [forBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
         [forBtn addTarget:self action:@selector(forBtnAction) forControlEvents:UIControlEventTouchUpInside];
         [selectView addSubview:forBtn];
         
@@ -201,7 +240,7 @@
         
         [modifyBtn setTitle:@"修改密码" forState:UIControlStateNormal];
         modifyBtn.backgroundColor = [UIColor clearColor];
-        [modifyBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [modifyBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
         [selectView addSubview:modifyBtn];
         [modifyBtn addTarget:self action:@selector(modifyBtnAction) forControlEvents:UIControlEventTouchUpInside];
         [modifyBtn mas_makeConstraints:^(MASConstraintMaker *make) {

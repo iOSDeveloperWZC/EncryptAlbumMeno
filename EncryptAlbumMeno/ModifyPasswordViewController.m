@@ -105,9 +105,12 @@
     }
     
     NSString *secret = [_keychainItemWrapper objectForKey:(id)kSecValueData];
-    if ([secret isEqualToString:newPasswordField.text]) {
+    
+    if ([secret isEqualToString:oldPasswordField.text]) {
         
-        
+        [_keychainItemWrapper setObject:confirNewPasswordField.text forKey:(id)kSecValueData];
+        [self dismissViewControllerAnimated:NO completion:nil];
+        [XHToast showCenterWithText:@"修改成功" duration:1.5];
     }
     else
     {

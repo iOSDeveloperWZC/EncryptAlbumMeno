@@ -32,12 +32,14 @@
 		692150CF1D5D7D41003728A3 /* icon_返回@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 692150CE1D5D7D41003728A3 /* icon_返回@2x.png */; };
 		692150D31D5D80C7003728A3 /* DataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 692150D21D5D80C7003728A3 /* DataBaseManager.m */; };
 		692150EF1D5D82A8003728A3 /* libsqlcipher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 692150E71D5D825E003728A3 /* libsqlcipher.a */; };
+		6932EF5D1D62A234007DFDFF /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 6932EF5C1D62A234007DFDFF /* UIImageEffects.m */; };
 		694AD7261D6166C300BE8424 /* MenoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 694AD7251D6166C300BE8424 /* MenoTableViewCell.m */; };
 		694AD7301D61758900BE8424 /* MenoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 694AD72F1D61758900BE8424 /* MenoModel.m */; };
 		694AD7341D6194C700BE8424 /* MenoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694AD7331D6194C700BE8424 /* MenoViewController.m */; };
 		694AD7401D61C67300BE8424 /* ForgetPassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694AD73D1D61C67300BE8424 /* ForgetPassViewController.m */; };
 		694AD7411D61C67300BE8424 /* PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694AD73F1D61C67300BE8424 /* PasswordViewController.m */; };
 		694AD74C1D61C6E500BE8424 /* ModifyPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694AD74B1D61C6E500BE8424 /* ModifyPasswordViewController.m */; };
+		694AD75D1D61D35D00BE8424 /* icon_choice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 694AD75C1D61D35D00BE8424 /* icon_choice@2x.png */; };
 		694CC9191D5DBC5D009F2D23 /* XZPhotoBrowserFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 694CC9181D5DBC5D009F2D23 /* XZPhotoBrowserFlowLayout.m */; };
 		694CC91C1D5DBC76009F2D23 /* PhotoDetailItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 694CC91B1D5DBC76009F2D23 /* PhotoDetailItem.m */; };
 		694CC9221D5DBC86009F2D23 /* XZPhotoBrowserPopTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 694CC91E1D5DBC86009F2D23 /* XZPhotoBrowserPopTransition.m */; };
@@ -307,6 +309,8 @@
 		692150D11D5D80C7003728A3 /* DataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataBaseManager.h; path = ../../../../Desktop/EncryptAlbumMeno/EncryptAlbumMeno/DataBaseManager.h; sourceTree = "<group>"; };
 		692150D21D5D80C7003728A3 /* DataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataBaseManager.m; path = ../../../../Desktop/EncryptAlbumMeno/EncryptAlbumMeno/DataBaseManager.m; sourceTree = "<group>"; };
 		692150D51D5D825E003728A3 /* sqlcipher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sqlcipher.xcodeproj; path = sqlcipher/sqlcipher.xcodeproj; sourceTree = "<group>"; };
+		6932EF5B1D62A234007DFDFF /* UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageEffects.h; sourceTree = "<group>"; };
+		6932EF5C1D62A234007DFDFF /* UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageEffects.m; sourceTree = "<group>"; };
 		694AD7241D6166C300BE8424 /* MenoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenoTableViewCell.h; sourceTree = "<group>"; };
 		694AD7251D6166C300BE8424 /* MenoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenoTableViewCell.m; sourceTree = "<group>"; };
 		694AD72E1D61758900BE8424 /* MenoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenoModel.h; sourceTree = "<group>"; };
@@ -319,6 +323,7 @@
 		694AD73F1D61C67300BE8424 /* PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordViewController.m; sourceTree = "<group>"; };
 		694AD74A1D61C6E500BE8424 /* ModifyPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyPasswordViewController.h; sourceTree = "<group>"; };
 		694AD74B1D61C6E500BE8424 /* ModifyPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyPasswordViewController.m; sourceTree = "<group>"; };
+		694AD75C1D61D35D00BE8424 /* icon_choice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_choice@2x.png"; sourceTree = "<group>"; };
 		694CC9171D5DBC5D009F2D23 /* XZPhotoBrowserFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZPhotoBrowserFlowLayout.h; sourceTree = "<group>"; };
 		694CC9181D5DBC5D009F2D23 /* XZPhotoBrowserFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZPhotoBrowserFlowLayout.m; sourceTree = "<group>"; };
 		694CC91A1D5DBC76009F2D23 /* PhotoDetailItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailItem.h; sourceTree = "<group>"; };
@@ -688,6 +693,8 @@
 		694CC9031D5DB4EB009F2D23 /* 图片 */ = {
 			isa = PBXGroup;
 			children = (
+				6932EF5B1D62A234007DFDFF /* UIImageEffects.h */,
+				6932EF5C1D62A234007DFDFF /* UIImageEffects.m */,
 				692150CE1D5D7D41003728A3 /* icon_返回@2x.png */,
 				69E5769B1D54950B001BD13A /* BB.gif */,
 				69EA51AB1D5C7A8400884A3E /* back_arrow@2x.png */,
@@ -698,6 +705,7 @@
 		694CC90A1D5DB4FC009F2D23 /* 提示框  */ = {
 			isa = PBXGroup;
 			children = (
+				694AD75C1D61D35D00BE8424 /* icon_choice@2x.png */,
 				690864C91D52CD1200328F12 /* XHToast.h */,
 				690864CA1D52CD1200328F12 /* XHToast.m */,
 			);
@@ -979,6 +987,7 @@
 				69EA51AC1D5C7A8400884A3E /* back_arrow@2x.png in Resources */,
 				692150C41D5D780C003728A3 /* demo.css in Resources */,
 				699CB9551D51E3E2001FDB4B /* Assets.xcassets in Resources */,
+				694AD75D1D61D35D00BE8424 /* icon_choice@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1043,6 +1052,7 @@
 				694CC9191D5DBC5D009F2D23 /* XZPhotoBrowserFlowLayout.m in Sources */,
 				692150CD1D5D7D19003728A3 /* BaseViewController.m in Sources */,
 				692150A91D5D7530003728A3 /* GBPhotoController.m in Sources */,
+				6932EF5D1D62A234007DFDFF /* UIImageEffects.m in Sources */,
 				694AD7341D6194C700BE8424 /* MenoViewController.m in Sources */,
 				694AD74C1D61C6E500BE8424 /* ModifyPasswordViewController.m in Sources */,
 				699CB94D1D51E3E2001FDB4B /* AppDelegate.m in Sources */,
@@ -1204,7 +1214,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "--------.EncryptAlbumMeno";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "arm64 armv7s";
+				VALID_ARCHS = "arm64 armv7s armv7";
 			};
 			name = Debug;
 		};
@@ -1248,7 +1258,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "--------.EncryptAlbumMeno";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "arm64 armv7s";
+				VALID_ARCHS = "arm64 armv7s armv7";
 			};
 			name = Release;
 		};

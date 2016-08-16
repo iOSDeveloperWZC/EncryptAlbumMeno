@@ -35,6 +35,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #import "BaseViewController.h"
 #import <AVOSCloud/AVOSCloud.h>
 #import "KeychainItemWrapper.h"
+#import "UIImageEffects.h"
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 #define WZCDBName @"wzcDBName"
