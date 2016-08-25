@@ -24,7 +24,7 @@
     [self showGifImageWithWebView];
 //     Do any additional setup after loading the view.
 //        self.view.backgroundColor = RGB(20, 160, 195) ;
-    self.view.backgroundColor = [UIColor whiteColor];
+        self.view.backgroundColor = [UIColor whiteColor];
         UIView *selectView = self.view;
         UILabel *albumLable = [[UILabel alloc]init];
         albumLable.layer.cornerRadius = 10;
@@ -116,7 +116,10 @@
     
     XZPhotoBrowserViewController *vc = [[XZPhotoBrowserViewController alloc]init];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
-    [self presentViewController:nav animated:NO completion:nil];
+    [UIView animateWithDuration:0.8 animations:^{
+        
+        [self presentViewController:nav animated:YES completion:nil];
+    }];
 }
 
 //备忘录
@@ -137,7 +140,6 @@
     //加载gif数据
     [imageWebView loadData:gifData MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
     //视图添加此gif控件
-
     [self.view addSubview:imageWebView];
 
     [imageWebView mas_makeConstraints:^(MASConstraintMaker *make) {

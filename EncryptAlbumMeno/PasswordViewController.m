@@ -142,6 +142,7 @@
         return;
     }
 
+    
     [_keychainItemWrapper setObject:checkCodeField.text forKey:(id)kSecValueData];
     [XHToast showTopWithText:@"设置成功" topOffset:80 duration:1];
     

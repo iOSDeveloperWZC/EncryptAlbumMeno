@@ -13,12 +13,17 @@
 #import "GBPhotoController.h"
 #import "ModifyPasswordViewController.h"
 #import "ForgetPassViewController.h"
+#import <LocalAuthentication/LocalAuthentication.h>
 @interface AlertSettingPasswordViewController ()<UITextFieldDelegate>
 {
     KeychainItemWrapper *keychainItemWrapper;
     UIView *selectView;
     UIAlertController *alertVc;
     UITextField *password;
+    UITextField *telephone;
+    UITextField *smsCodel;
+    UIButton *sendCodeBtn;
+    UIButton *sureBtn;
 }
 @end
 
@@ -124,6 +129,30 @@
     password.secureTextEntry = YES;
     BOOL firstLanuchApp = [userDefualts boolForKey:@"firstLanuchApp"];
     
+    telephone = [[UITextField alloc]init];
+    telephone.borderStyle = UITextBorderStyleNone;
+    telephone.textAlignment = NSTextAlignmentCenter;
+    telephone.placeholder =  @"绑定电话号码";
+    [telephone setBackground:[UIImage imageNamed:@"Tele"]];
+    telephone.keyboardType = UIKeyboardTypeNumberPad;
+    [selectView addSubview:telephone];
+    
+    sendCodeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    [sendCodeBtn setTitle:@"发送验证码" forState:UIControlStateNormal];
+    [sendCodeBtn addTarget:self action:@selector(sendCode:) forControlEvents:UIControlEventTouchUpInside];
+    [sendCodeBtn setTitleColor:[UIColor purpleColor] forState:UIControlStateNormal];
+    [selectView addSubview:sendCodeBtn];
+    
+    smsCodel = [[UITextField alloc]init];
+    smsCodel.borderStyle = UITextBorderStyleNone;
+    smsCodel.textAlignment = NSTextAlignmentCenter;
+    smsCodel.placeholder =  @"输入验证码验证手机号";
+    [smsCodel setBackground:[UIImage imageNamed:@"password"]];
+    smsCodel.keyboardType = UIKeyboardTypeNumberPad;
+    [selectView addSubview:smsCodel];
+
+    
     //第一次启动
     if (!firstLanuchApp) {
         password.placeholder = @"设置隐私密码";
@@ -181,25 +210,79 @@
         
     }];
 
+    //第一次启动
+    if (!firstLanuchApp) {
+        
+        
+        
+        [telephone mas_makeConstraints:^(MASConstraintMaker *make) {
+           
+            make.left.mas_equalTo(20);
+//            make.right.mas_equalTo(sendCodeBtn);
+            make.height.mas_equalTo(50);
+            make.top.mas_equalTo(logo1Lable.bottom).mas_offset(70);
 
-    [password mas_makeConstraints:^(MASConstraintMaker *make) {
-       
-//        make.size.mas_equalTo(CGSizeMake(240, 44));
-        make.left.mas_equalTo(20);
-        make.right.mas_equalTo(-20);
-        make.height.mas_equalTo(50);
-//        make.centerX.mas_equalTo(selectView.centerX);
-//        make.bottom.mas_equalTo(selectView.centerY).mas_offset(-60);
-        make.top.mas_equalTo(logo1Lable.bottom).mas_offset(70);
-    }];
+        }];
+        
+        [sendCodeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+           
+            make.left.mas_equalTo(telephone.right).mas_offset(10);
+            make.right.mas_equalTo(-20);
+            make.centerY.mas_equalTo(telephone.centerY);
+        }];
+        
+        [smsCodel mas_makeConstraints:^(MASConstraintMaker *make) {
+           
+            make.left.mas_equalTo(20);
+            make.right.mas_equalTo(-20);
+            make.height.mas_equalTo(50);
+            make.top.mas_equalTo(telephone.bottom).mas_offset(40);
+        }];
+        
+        [password mas_makeConstraints:^(MASConstraintMaker *make) {
+            
+            //        make.size.mas_equalTo(CGSizeMake(240, 44));
+            make.left.mas_equalTo(20);
+            make.right.mas_equalTo(-20);
+            make.height.mas_equalTo(50);
+            //        make.centerX.mas_equalTo(selectView.centerX);
+            //        make.bottom.mas_equalTo(selectView.centerY).mas_offset(-60);
+            make.top.mas_equalTo(smsCodel.bottom).mas_offset(40);
+        }];
+    }
+    else
+    {
+        [password mas_makeConstraints:^(MASConstraintMaker *make) {
+            
+            //        make.size.mas_equalTo(CGSizeMake(240, 44));
+            make.left.mas_equalTo(20);
+            make.right.mas_equalTo(-20);
+            make.height.mas_equalTo(50);
+            //        make.centerX.mas_equalTo(selectView.centerX);
+            //        make.bottom.mas_equalTo(selectView.centerY).mas_offset(-60);
+            make.top.mas_equalTo(logo1Lable.bottom).mas_offset(70);
+        }];
+    }
+
+
+ 
     
     [selectView mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.edges.mas_equalTo(self.view);
     }];
     
-    UIButton *sureBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [sureBtn setTitle:@"确定" forState:UIControlStateNormal];
+    sureBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    if (!firstLanuchApp) {
+        
+        [sureBtn setTitle:@"注册" forState:UIControlStateNormal];
+    }
+    else
+    {
+        [sureBtn setTitle:@"确定" forState:UIControlStateNormal];
+    }
+
+    
     sureBtn.layer.cornerRadius = 10;
     sureBtn.layer.borderColor = [UIColor purpleColor].CGColor;
     sureBtn.layer.borderWidth = 1;
@@ -270,9 +353,9 @@
 }
 
 
-
 -(void)rebackBtnAction:(UIButton *)button
 {
+    [password resignFirstResponder];
     [UIView transitionWithView:self.view duration:0.6 options:UIViewAnimationOptionTransitionFlipFromRight animations:^{
         
         selectView.hidden = YES;
@@ -294,6 +377,34 @@
 
 }
 
+//发送验证码
+-(void)sendCode:(UIButton *)btn
+{
+    if (telephone.text.length != 11) {
+        
+        [XHToast showCenterWithText:@"请输入11位电话号码"];
+        return;
+    }
+    
+    AVUser *user = [AVUser user];// 新建 AVUser 对象实例
+    user.username = [NSString stringWithFormat:@"%@",[NSDate date]];// 设置用户名
+    user.password =  [NSString stringWithFormat:@"%@00890098",password.text];// 设置密码
+    user.mobilePhoneNumber = telephone.text;
+    
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            // 注册成功
+            [XHToast showCenterWithText:@"发送成功，请查收"];
+            
+        } else {
+            // 失败的原因可能有多种，常见的是用户名已经存在。
+        }
+    }];
+
+    
+}
+
+//注册按钮
 -(void)sureBtnAction:(UIButton *)button
 {
     NSUserDefaults *userDefualts = [NSUserDefaults standardUserDefaults];
@@ -301,11 +412,33 @@
     //第一次
     if (!firstLanuchApp) {
         
-        [keychainItemWrapper setObject:password.text forKey:(id)kSecValueData];
-        [XHToast showTopWithText:@"设置成功" topOffset:80 duration:1];
-        [userDefualts setBool:YES forKey:@"firstLanuchApp"];
-        SelectViewController *vc = [[SelectViewController alloc]init];
-        [self presentViewController:vc animated:YES completion:nil];
+        if (password.text.length == 0) {
+            
+            [XHToast showCenterWithText:@"还没设定密码"];
+            return;
+        }
+        
+        if (telephone.text.length != 11) {
+            
+            [XHToast showCenterWithText:@"绑定号码不是11位？"];
+            return;
+        }
+        
+        [XHToast showCenterWithText:@"请稍等.." duration:2];
+        [AVUser verifyMobilePhone:smsCodel.text withBlock:^(BOOL succeeded, NSError *error) {
+            //验证结果
+            if (succeeded) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    [keychainItemWrapper setObject:password.text forKey:(id)kSecValueData];
+                    [XHToast showTopWithText:@"设置成功" topOffset:80 duration:1];
+                    [userDefualts setBool:YES forKey:@"firstLanuchApp"];
+                    
+                    SelectViewController *vc = [[SelectViewController alloc]init];
+                    [self presentViewController:vc animated:YES completion:nil];
+                });
+            }
+        }];
     }
     else
     {
@@ -330,7 +463,144 @@
                 selectView.hidden = NO;
         
             } completion:^(BOOL finished) {
-        
+                NSUserDefaults *userDefualts = [NSUserDefaults standardUserDefaults];
+                BOOL firstLanuchApp = [userDefualts boolForKey:@"firstLanuchApp"];
+                //不是第一次
+                if (firstLanuchApp) {
+                    
+                    //弹出
+                    LAContext *myContext = [[LAContext alloc] init];
+                    NSError *authError = nil;
+                    //授权原因
+                    NSString *myLocalizedReasonString = @"验证密码";
+                    //if条件判断设备是否支持Touch ID 是否开启Touch id等
+
+                    if ([myContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&authError]) {
+                        //弹出指纹识别界面
+                        [myContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
+                                  localizedReason:myLocalizedReasonString
+                                            reply:^(BOOL success, NSError *authenticationError) {
+                                                if (success) {
+                                                    
+                                                    NSLog(@"验证成功成功");
+                                                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                                                        //用户选择输入密码，切换主线程处理
+                                                        SelectViewController *vc = [[SelectViewController alloc]init];
+                                                        [self presentViewController:vc animated:NO completion:nil];
+                                                    }];
+                                                }
+                                                else {
+                                                    
+                                                    switch (authenticationError.code) {
+                                                            
+                                                        case LAErrorAuthenticationFailed:
+                                                        {
+                                                    
+                                                            dispatch_async(dispatch_get_main_queue(), ^{
+                                                                [XHToast showTopWithText:@"指纹错误" topOffset:80 duration:1];
+                                                            });
+                                                           
+                                                            break;
+                                                        }
+                                                        case LAErrorUserCancel:
+                                                        {
+                                                            NSLog(@"用户点击了取消按钮");
+                                                            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                                                                //用户选择输入密码，切换主线程处理
+                                                    
+                                                                [password becomeFirstResponder];
+                                                            }];
+                                                            //用户取消验证Touch ID
+                                                            break;
+                                                        }
+                                                        case LAErrorUserFallback:
+                                                        {
+                                                            NSLog(@"用户选择输入密码");
+                                                            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                                                                //用户选择输入密码，切换主线程处理
+                                                                [password becomeFirstResponder];
+                                                            }];
+                                                            break;
+                                                        }
+                                                        case LAErrorSystemCancel :
+                                                        {
+                                                            NSLog(@"切换到其他的app(按了Home按键)，被系统取消");
+                                                            
+                                                            break;
+                                                        }//
+                                                        case LAErrorTouchIDLockout :
+                                                        {
+                                                            NSLog(@"用户指纹错误多次，TOuch ID 被锁定");
+                                                            dispatch_async(dispatch_get_main_queue(), ^{
+                                                                 [XHToast showTopWithText:@"指纹错误多次,被锁定" topOffset:80 duration:1];
+                                                            });
+                                                         
+                                                            break;
+                                                        }//9.0 我试了验证过程中电话进来 返回的LAErrorSystemCancel 错误码 不是这个
+                                                        case LAErrorAppCancel:
+                                                        {
+                                                            NSLog(@"被(突如其来的)应用（电话）取消");
+                                                            
+                                                            break;
+                                                        }//LAErrorInvalidContext
+                                                        default:
+                                                        {
+                                                            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                                                                //其他情况，切换主线程处理
+                                                            }];
+                                                            break;
+                                                        }
+                                                    }
+                                                    
+                                                }
+                                                
+                                            }];
+                    }
+                    else {
+                        
+                        switch (authError.code) {
+                                //9.0 试过了不设置密码返回的是 LAErrorTouchIDNotEnrolled 错误码
+                            case LAErrorPasscodeNotSet:
+                            {
+                                NSLog(@"在设置里面没有设置密码");
+                                break;
+                            }
+                            case LAErrorTouchIDNotAvailable:
+                            {
+                                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                                    //用户选择输入密码，切换主线程处理
+//                                    [password becomeFirstResponder];
+                                    [XHToast showTopWithText:@"设备不支持Touch ID" topOffset:80 duration:1];
+                                }];
+                                NSLog(@"设备不支持Touch ID");
+                                break;
+                            }
+                            case LAErrorTouchIDNotEnrolled:
+                            {
+                                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                                    //用户选择输入密码，切换主线程处理
+//                                    [password becomeFirstResponder];
+                                    [XHToast showTopWithText:@"没有开启指纹验证" topOffset:80 duration:1];
+                                }];
+                                NSLog(@"在设置里面没有设置Touch Id 指纹");
+                                break;
+                            }
+                            case LAErrorInvalidContext:
+                            {
+                                NSLog(@"创建的指纹对象失效");
+                                break;
+                            }
+                                
+                            default:
+                            {
+                                break;
+                            }
+                        }
+                    }
+                    
+                }
+                
+                
     }];
 
 }

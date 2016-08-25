@@ -52,7 +52,8 @@
     //3、创建两个文本框和下划线
     //2、设置账号登录框
     telephoneField = [[UITextField alloc]initWithFrame:CGRectMake(25, 90, kScreenWidth - 25 - 180, 60)];
-    telephoneField.placeholder = @"手机号";
+    telephoneField.placeholder = @"输入绑定的手机号";
+    telephoneField.keyboardType = UIKeyboardTypeNumberPad;
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     dic[NSForegroundColorAttributeName] = RGB(204.0,204.0,204.0);
     dic[NSFontAttributeName] = [UIFont systemFontOfSize:16];
@@ -125,19 +126,28 @@
         return;
     }
     
+//    //验证手机号
+//    [AVUser requestMobilePhoneVerify:telephoneField.text withBlock:^(BOOL succeeded, NSError *error) {
+//        if(succeeded){
+//            //发送成功
+//        }
+//    }];
+    
     [AVOSCloud requestSmsCodeWithPhoneNumber:telephoneField.text
-                                     appName:@"私密相册"
+                                     appName:@"Encrypt"
                                    operation:@"忘记密码操作"
                                   timeToLive:10
                                     callback:^(BOOL succeeded, NSError *error) {
+                                        
                                         if (succeeded) {
                                             // 发送成功
                                             //短信格式类似于：
                                             //您正在{某应用}中进行{具体操作名称}，您的验证码是:{123456}，请输入完整验证，有效期为:{10}分钟
-                                            [XHToast showCenterWithText:@"获取成功,请查看"];
-                                        
+                                            [XHToast showCenterWithText:@"发送成功,请注意查收短信"];
                                         }
+                                        
                                     }];
+    
 
     [fetchCheckButton setTitle:@"60秒后重发" forState:UIControlStateDisabled];
     [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerFired:) userInfo:nil repeats:YES];
@@ -196,14 +206,26 @@
 -(void)nextStepButtonAction
 {
     
+    if (checkCodeField.text.length == 0) {
+        
+        [XHToast showCenterWithText:@"请输入验证码"];
+        return;
+    }
 //    UITextField *telephoneField;
 //    UITextField *checkCodeField;
-    PasswordViewController *vc = [[PasswordViewController alloc]init];
+    
     [AVOSCloud verifySmsCode:checkCodeField.text mobilePhoneNumber:telephoneField.text callback:^(BOOL succeeded, NSError *error) {
         if(succeeded){
             //验证成功
+            PasswordViewController *vc = [[PasswordViewController alloc]init];
+            vc.keychainItemWrapper = _keychainItemWrapper;
             [self presentViewController:vc animated:YES completion:nil];
         }
+        else
+        {
+            [XHToast showCenterWithText:@"验证电话号码失败?"];
+        }
+        
     }];
 }
 
